@@ -4,6 +4,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import Globe from '../assets/globe.gif'; // adjust the path/filename as necessary
+
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
@@ -123,8 +125,8 @@ const About = () => {
           <div className="absolute inset-0 blueprint-grid opacity-10 pointer-events-none"></div>
           
           {/* Globe Canvas Simulation */}
-          <div className="absolute -bottom-16 -right-16 w-[120%] h-[120%] opacity-40 mix-blend-screen pointer-events-none">
-            <img src="/assets/globe.gif" alt="Globe" className="w-full h-full object-cover" />
+          <div className="absolute w-[80%] h-[80%] opacity-40 mix-blend-screen pointer-events-none">
+            <img src={Globe} alt="Globe" className="w-full h-full object-cover" />
           </div>
 
           <div className="relative z-10">
