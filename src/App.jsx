@@ -9,7 +9,7 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <main className="relative min-h-screen bg-[#0A0A0A] text-white selection:bg-primary selection:text-black overflow-x-hidden">
+    <main className="relative min-h-screen bg-background text-white selection:bg-primary selection:text-black overflow-x-hidden">
       
       {/* Noise Overlay Layer */}
       <div 
@@ -23,7 +23,7 @@ function App() {
       <div className="fixed inset-0 blueprint-grid z-0 pointer-events-none opacity-10"></div>
 
       {/* Core Landing Page Content Layers */}
-      <div className="relative z-10 flex flex-col w-full bg-[#0A0A0A] shadow-[0_20px_40px_rgba(0,0,0,0.8)]">
+      <div className="relative z-10 flex flex-col w-full bg-background shadow-[0_20px_40px_rgba(0,0,0,0.8)]">
         <Navbar />
         <Hero />
         <ClientMarquee />

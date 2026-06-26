@@ -60,7 +60,7 @@ const Navbar = () => {
             target="_blank" 
             rel="noopener noreferrer"
             className="btn-primary py-2 px-5 md:py-2.5 md:px-7 text-[10px] md:text-[11px]" 
-            href="https://calendly.com/company-resourcio25/30min"
+            href="#"
           >
             Get Started
           </a>

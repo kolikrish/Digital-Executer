@@ -17,7 +17,7 @@ const ServiceCard = ({ number, title, description }) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative bg-[#0A0A0A] group p-8 sm:p-10 h-full min-h-[320px] flex flex-col justify-between border border-transparent hover:border-hairline-strong transition-all duration-500 overflow-hidden cursor-default"
+      className="relative bg-background group p-8 sm:p-10 h-full min-h-80 flex flex-col justify-between border border-transparent hover:border-hairline-strong transition-all duration-500 overflow-hidden cursor-default"
     >
       {/* Radial gradient background tracking mouse */}
       <div 
@@ -58,57 +58,57 @@ const ServiceCard = ({ number, title, description }) => {
 
 const Services = () => {
   const serviceList = [
-    {
-      number: "01",
-      title: "PRODUCT_STRATEGY & UX",
-      description: "Designing high-performance interfaces through user-behavior mapping and iterative prototyping. We build digital surfaces that prioritize operational clarity and conversion velocity."
-    },
-    {
-      number: "02",
-      title: "FULL_STACK ARCHITECTURE",
-      description: "Engineering scalable web and mobile infrastructures using modern, type-safe protocols. We deploy robust digital engines built for high-concurrency and global distribution."
-    },
-    {
-      number: "03",
-      title: "NEURAL_MESH & AI",
-      description: "Integrating advanced automation and neural-network intelligence into your business workflow. We eliminate operational bottlenecks through high-precision machine learning models."
-    },
-    {
-      number: "04",
-      title: "CORE_PRODUCT MANAGEMENT",
-      description: "Strategic roadmap execution with a focus on market alignment and technical scalability. We manage the full lifecycle of your digital resources from concept to stable build."
-    },
-    {
-      number: "05",
-      title: "TECHNICAL ADVISORY",
-      description: "Architectural oversight and scaling strategy for high-growth enterprises. We provide the technical blueprints required to maintain performance under extreme load."
-    },
-    {
-      number: "06",
-      title: "BRAND_IDENTITY SYSTEMS",
-      description: "Developing comprehensive visual languages that communicate technical authority. We build cohesive brand architectures across all digital and physical touchpoints."
-    }
-  ];
+  {
+    "number": "01",
+    "title": "AI AGENTS",
+    "description": "Deploy intelligent AI agents that automate customer support, qualify leads, schedule appointments, answer inquiries, and operate 24/7—reducing manual work while improving customer experience."
+  },
+  {
+    "number": "02",
+    "title": "BUSINESS AUTOMATION",
+    "description": "Streamline repetitive workflows with intelligent automation. From CRM integrations and lead management to WhatsApp, email, and internal business processes, we help your business run faster and more efficiently."
+  },
+  {
+    "number": "03",
+    "title": "LEAD GENERATION & SALES",
+    "description": "Build predictable customer acquisition systems with automated funnels, conversion optimization, CRM pipelines, and sales automation designed to generate qualified leads and increase revenue."
+  },
+  {
+    "number": "04",
+    "title": "DIGITAL MARKETING STRATEGY",
+    "description": "Develop data-driven marketing strategies that strengthen your brand, improve customer acquisition, and maximize return on every marketing investment across digital channels."
+  },
+  {
+    "number": "05",
+    "title": "WEB & APP DEVELOPMENT",
+    "description": "Design and build high-performance websites, custom web applications, mobile apps, dashboards, and SaaS platforms focused on speed, scalability, and exceptional user experience."
+  },
+  {
+    "number": "06",
+    "title": "SOCIAL MEDIA & BRAND GROWTH",
+    "description": "Create strategic content systems that build authority, increase engagement, and establish a strong digital presence across today's most impactful social platforms."
+  }
+]
 
   return (
-    <section id="services" className="relative w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 md:py-24 bg-[#0A0A0A] border-x-2 border-hairline-strong">
+    <section id="services" className="relative w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 md:py-24 bg-background border-x-2 border-hairline-strong">
       
       {/* Services Header */}
       <div className="w-full pt-4 mb-16 flex flex-col items-center text-center gap-4">
         <div className="max-w-3xl">
-          <h2 className="text-4xl md:text-6xl font-display font-extrabold leading-[1] tracking-tighter uppercase heading-gradient">
-            DIFFERENTIAL.
+          <h2 className="text-4xl md:text-6xl font-display font-extrabold leading-none tracking-tighter uppercase heading-gradient">
+            CORE SERVICES.
           </h2>
         </div>
         <div className="max-w-sm mt-4">
           <p className="font-mono text-[9px] md:text-[10px] text-[#555] uppercase leading-relaxed tracking-widest">
-            High-performance technical capabilities engineered for architectural integrity.
+            AI-powered solutions engineered to automate operations, accelerate growth, and build scalable digital businesses.
           </p>
         </div>
       </div>
 
       {/* Services Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full border border-hairline bg-hairline gap-[1px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full border border-hairline bg-hairline gap-px">
         {serviceList.map((service, index) => (
           <ServiceCard 
             key={index}
