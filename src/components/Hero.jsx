@@ -90,7 +90,7 @@ const Hero = () => {
           </div>
 
           {/* Stats Bar */}
-          <div className="w-full border-t border-hairline py-6 md:py-10 flex flex-row justify-around max-w-4xl mx-auto">
+          <div className="w-full border-t border-hairline py-6 md:py-6 flex flex-row justify-around max-w-4xl mx-auto">
             <div className="flex flex-col items-center gap-1 group">
               <span className="text-[8px] md:text-[9px] font-mono text-[#555] group-hover:text-primary transition-colors uppercase tracking-[0.3em] font-bold">Projects</span>
               <span className="text-xl md:text-4xl font-display text-white font-bold leading-none">50+</span>
