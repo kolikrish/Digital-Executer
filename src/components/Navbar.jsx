@@ -1,31 +1,12 @@
 import { useState, useEffect } from "react";
 
 const SplitTextLink = ({ href, children }) => {
-  const chars = children.split("");
   return (
-    <a href={href} className="text-[11px] font-mono uppercase tracking-[0.3em] font-semibold text-[#888] hover:text-white split-char-link py-1">
-      <span className="char-group-top">
-        {chars.map((char, index) => (
-          <span 
-            key={index} 
-            className="inline-block transition-transform duration-300 ease-[cubic-bezier(0.76,0,0.24,1)]" 
-            style={{ transitionDelay: `${index * 20}ms` }}
-          >
-            {char === " " ? "\u00A0" : char}
-          </span>
-        ))}
-      </span>
-      <span className="char-group-bottom text-[#FF4D00]">
-        {chars.map((char, index) => (
-          <span 
-            key={index} 
-            className="inline-block transition-transform duration-300 ease-[cubic-bezier(0.76,0,0.24,1)]" 
-            style={{ transitionDelay: `${index * 20}ms` }}
-          >
-            {char === " " ? "\u00A0" : char}
-          </span>
-        ))}
-      </span>
+    <a
+      href={href}
+      className="text-[11px] font-mono uppercase tracking-[0.3em] font-semibold text-[#888] hover:text-white py-1 transition-colors"
+    >
+      {children}
     </a>
   );
 };
@@ -47,22 +28,23 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full z-[100] transition-all duration-500 py-5 ${
+    <nav className={`fixed top-0 w-full z-100 transition-all duration-500 py-5 ${
       scrolled 
         ? "bg-background/85 backdrop-blur-md border-b border-hairline-strong shadow-lg" 
         : "bg-background border-b border-hairline"
     }`}>
       <div className="max-w-7xl mx-auto border-x-2 border-hairline-strong px-6 sm:px-12 flex items-center justify-between">
         {/* Brand Logo */}
-        <a className="flex items-center gap-2 hover:opacity-80 transition-opacity z-[101]" href="#">
-          <img 
+        <a className="flex items-center gap-2 hover:opacity-80 transition-opacity z-101" href="#">
+          {/* <img 
             alt="Resourcio" 
-            loading="lazy" 
+            loading="lazy"
             width="150" 
             height="24" 
-            className="brightness-0 invert md:w-[150px] md:h-[24px]" 
+            className="brightness-0 invert md:w-37.5 md:h-6"
             src="https://res.cloudinary.com/dbwbopuch/image/upload/v1759772826/Group_40110_p0gwzi.svg" 
-          />
+          /> */}
+          <h2>Digital Executerr</h2>
         </a>
 
         {/* Center Desktop Links */}
@@ -73,7 +55,7 @@ const Navbar = () => {
         </div>
 
         {/* CTA Button and Hamburger */}
-        <div className="flex items-center gap-4 md:gap-8 z-[101]">
+        <div className="flex items-center gap-4 md:gap-8 z-101">
           <a 
             target="_blank" 
             rel="noopener noreferrer"
@@ -102,7 +84,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Panel */}
       {isOpen && (
-        <div className="md:hidden fixed inset-0 top-[70px] bg-background/95 backdrop-blur-xl z-[99] border-t border-hairline-strong flex flex-col justify-start p-8 animate-fade-in">
+        <div className="md:hidden fixed inset-0 top-17.4 bg-background/95 backdrop-blur-xl z-99 border-t border-hairline-strong flex flex-col justify-start p-8 animate-fade-in">
           <div className="flex flex-col gap-8 mt-8">
             <a 
               href="#services" 
