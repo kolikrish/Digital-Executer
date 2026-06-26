@@ -47,7 +47,7 @@ const ServiceCard = ({ number, title, description }) => {
           <h3 className="text-lg md:text-xl font-display font-extrabold mb-4 text-white group-hover:text-primary transition-colors duration-300 uppercase leading-tight tracking-tight">
             {title}
           </h3>
-          <p className="text-[#888] leading-relaxed text-[11px] md:text-[12px] group-hover:text-[#bbb] transition-colors duration-500 uppercase tracking-wide font-light">
+          <p className="text-[#888] leading-relaxed text-[11px] md:text-[14px] group-hover:text-[#bbb] transition-colors duration-500 tracking-wide font-light">
             {description}
           </p>
         </div>

@@ -89,24 +89,6 @@ const Hero = () => {
             </a>
           </div>
 
-          {/* Stats Bar */}
-          <div className="w-full border-t border-hairline py-6 md:py-6 flex flex-row justify-around max-w-4xl mx-auto">
-            <div className="flex flex-col items-center gap-1 group">
-              <span className="text-[8px] md:text-[9px] font-mono text-[#555] group-hover:text-primary transition-colors uppercase tracking-[0.3em] font-bold">Projects</span>
-              <span className="text-xl md:text-4xl font-display text-white font-bold leading-none">50+</span>
-            </div>
-            
-            <div className="flex flex-col items-center gap-1 group border-x border-hairline px-8 md:px-24">
-              <span className="text-[8px] md:text-[9px] font-mono text-[#555] group-hover:text-primary transition-colors uppercase tracking-[0.3em] font-bold">Partners</span>
-              <span className="text-xl md:text-4xl font-display text-white font-bold leading-none">12+</span>
-            </div>
-
-            <div className="flex flex-col items-center gap-1 group">
-              <span className="text-[8px] md:text-[9px] font-mono text-[#555] group-hover:text-primary transition-colors uppercase tracking-[0.3em] font-bold">Success</span>
-              <span className="text-xl md:text-4xl font-display text-white font-bold leading-none font-sans" style={{ fontFamily: 'var(--font-display)' }}>100%</span>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
