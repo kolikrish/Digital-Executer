@@ -47,7 +47,7 @@ const Navbar = () => {
         ? "bg-background/85 backdrop-blur-md border-b border-hairline-strong shadow-lg" 
         : "bg-background border-b border-hairline"
     }`}>
-      <div className="max-w-7xl mx-auto border-x-2 border-hairline-strong px-6 sm:px-12 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 sm:px-12 flex items-center justify-between">
         {/* Brand Logo */}
         <a className="flex items-center gap-3 hover:opacity-90 transition-opacity z-101 py-1" href="/">
           <img 
@@ -134,32 +134,32 @@ const Navbar = () => {
           </div>
           <div className="flex flex-col gap-8 px-8 mt-12 w-full items-center">
             <a 
-              href="#services" 
+              href="/" 
               onClick={() => setIsOpen(false)}
               className="text-lg font-display font-semibold uppercase tracking-widest text-[#888] hover:text-white transition-colors py-2 w-full text-center rounded hover:bg-primary/15"
             >
-              Services
+              Home
             </a>
             <a 
-              href="#projects" 
-              onClick={() => setIsOpen(false)}
-              className="text-lg font-display font-semibold uppercase tracking-widest text-[#888] hover:text-white transition-colors py-2 w-full text-center rounded hover:bg-primary/15"
-            >
-              Projects
-            </a>
-            <a 
-              href="#about" 
+              href="/about" 
               onClick={() => setIsOpen(false)}
               className="text-lg font-display font-semibold uppercase tracking-widest text-[#888] hover:text-white transition-colors py-2 w-full text-center rounded hover:bg-primary/15"
             >
               About
             </a>
             <a 
-              href="#"
+              href="/services" 
+              onClick={() => setIsOpen(false)}
+              className="text-lg font-display font-semibold uppercase tracking-widest text-[#888] hover:text-white transition-colors py-2 w-full text-center rounded hover:bg-primary/15"
+            >
+              Services
+            </a>
+            <a 
+              href="/contact"
               onClick={() => setIsOpen(false)}
               className="btn-primary mt-6 w-full text-base py-3 px-2 uppercase"
             >
-              Get Started
+              Contact
             </a>
           </div>
         </div>

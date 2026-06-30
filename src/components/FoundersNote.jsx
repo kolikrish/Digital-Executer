@@ -18,7 +18,7 @@ const FoundersNote = () => {
                 Founder's Note
               </h2>
               <p className="text-sm text-primary/80 font-mono tracking-wider mt-1">
-                Hitali Rai, Founder
+                Hitali Rai, CO-Founder
               </p>
             </div>
           </div>

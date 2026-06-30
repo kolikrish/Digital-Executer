@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import AboutSection from "../components/About";
 import AboutMission from "../components/AboutMission";
+import OurMission from "../components/OurMission";
 import FoundersNote from "../components/FoundersNote";
 import Footer from "../components/Footer";
 import FaQ from "../components/FaQ";
@@ -26,6 +27,8 @@ const About = () => {
         </div>
 
         <AboutMission />
+
+        <OurMission />
 
         <FoundersNote />
 
