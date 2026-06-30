@@ -2,7 +2,7 @@ import Hetali_rai from '../assets/Hetali_rai.jpeg';
 
 const FoundersNote = () => {
   return (
-    <section className="relative w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 md:py-24 bg-background border-x-2 border-hairline-strong border-t border-hairline">
+    <section className="relative w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 md:py-24 bg-background border-x-2 border-t border-hairline">
       {/* Subtle background glow */}
       <div className="absolute bottom-0 right-1/4 w-75 h-75 bg-primary/5 blur-[100px] rounded-full pointer-events-none z-0"></div>
 
