@@ -58,11 +58,11 @@ const Testimonials = () => {
     >
       <div className="flex items-center justify-between mb-5">
         <div>
-          <p className="text-[11px] uppercase tracking-[0.35em] text-white/40 font-mono mb-1">
+          <p className="text-[11px] text-white/40 font-mono mb-1">
             {item.role}
           </p>
 
-          <h3 className="text-xl font-bold uppercase tracking-tight text-white">
+          <h3 className="text-xl font-medium uppercase tracking-tight text-white">
             {item.name}
           </h3>
         </div>
@@ -79,7 +79,7 @@ const Testimonials = () => {
         </div>
       </div>
 
-      <p className="text-white/60 leading-relaxed text-sm">{item.quote}</p>
+      <p className="text-white/60 font-[poppins] leading-relaxed text-sm">{item.quote}</p>
     </article>
   );
 
@@ -136,7 +136,7 @@ const Testimonials = () => {
             FEEDBACK.
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-white">
+          <h2 className="text-4xl md:text-5xl text-white">
             Aggregated performance metrics and qualitative strategic assessments.
           </h2>
 

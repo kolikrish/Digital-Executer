@@ -3,6 +3,11 @@
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
 
+@font-face {
+  font-family: 'poppins';
+  src: url('./assets/fonts/Poppins-Regular.ttf') format(truetype);
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme {

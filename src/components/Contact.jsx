@@ -8,19 +8,19 @@ const Contact = () => {
         <div className="absolute inset-0 blueprint-grid opacity-[0.08] pointer-events-none"></div>
         
         {/* Orange radial glow backdrop */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[600px] h-[200px] bg-primary/5 blur-[120px] opacity-30 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-150 h-50 bg-primary/5 blur-[120px] opacity-30 pointer-events-none"></div>
 
         {/* Header copy */}
         <div className="relative z-10 max-w-4xl mb-8 md:mb-12">
-          <h2 className="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold leading-[0.95] tracking-tighter uppercase heading-gradient">
-            READY TO ARCHITECT
+          <h2 className="text-4xl sm:text-6xl md:text-7xl font-display leading-[0.95] tracking-tighter heading-gradient">
+            Ready To Architect
           </h2>
-          <h2 className="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold leading-[0.95] tracking-tighter uppercase text-white/20 mt-1">
-            YOUR FOUNDATION?
+          <h2 className="text-4xl sm:text-6xl md:text-7xl font-display leading-[0.95] tracking-tighter text-white/20 mt-1">
+            Your Foundation ?
           </h2>
         </div>
 
-        <p className="relative z-10 font-mono text-[9px] md:text-[10px] text-[#888] uppercase tracking-[0.3em] font-semibold mb-8 max-w-md">
+        <p className="relative z-10 font-mono text-[9px] md:text-[12px] text-[#888] uppercase tracking-[0.3em] font-semibold mb-8 max-w-md">
           Available for strategic partnerships and high-stakes technical execution.
         </p>
 
@@ -34,29 +34,6 @@ const Contact = () => {
           Schedule a Call
         </a>
       </div>
-
-      {/* Footer Nav Bar */}
-      <footer className="w-full border-t border-hairline px-6 sm:px-12 py-8 bg-black/40 flex flex-col md:flex-row items-center justify-between gap-6">
-        {/* Copyright info */}
-        <div className="flex flex-col sm:flex-row items-center gap-2 font-mono text-[9px] text-[#555] uppercase tracking-wider font-semibold">
-          <span>&copy; 2026 Resourcio Private Limited.</span>
-          <span className="hidden sm:inline">|</span>
-          <span>All Rights Reserved.</span>
-        </div>
-
-        {/* Quick Links */}
-        <div className="flex items-center gap-8 md:gap-12">
-          <a href="#services" className="font-mono text-[9px] text-[#555] hover:text-primary uppercase tracking-widest transition-colors font-bold">
-            Services
-          </a>
-          <a href="#projects" className="font-mono text-[9px] text-[#555] hover:text-primary uppercase tracking-widest transition-colors font-bold">
-            Portfolio
-          </a>
-          <a href="#about" className="font-mono text-[9px] text-[#555] hover:text-primary uppercase tracking-widest transition-colors font-bold">
-            About
-          </a>
-        </div>
-      </footer>
 
     </section>
   );

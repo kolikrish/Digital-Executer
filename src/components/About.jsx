@@ -45,16 +45,16 @@ const About = () => {
       {/* Heading Block */}
       <div className="w-full pt-4 mb-16 flex flex-col items-center text-center gap-4">
         <div className="max-w-4xl">
-          <h2 className="text-4xl md:text-6xl font-display font-extrabold leading-none tracking-tighter uppercase heading-gradient">
-            We Build Intelligent
+          <h2 className="text-4xl md:text-6xl font-display leading-none tracking-tighter heading-gradient">
+            We Build the System —
           </h2>
-          <h2 className="text-4xl md:text-6xl font-display font-extrabold leading-none tracking-tighter uppercase text-white/20 mt-1">
-            Business Systems.
+          <h2 className="text-4xl md:text-6xl font-display leading-none tracking-tighter text-white/20 mt-1">
+            and Help You Execute It.
           </h2>
         </div>
         <div className="max-w-sm mt-4">
-          <p className="font-mono text-[9px] md:text-[10px] text-[#555] uppercase leading-relaxed tracking-widest">
-            Empowering businesses with AI, automation, and digital solutions that drive measurable growth
+          <p className="font-mono text-[9px] md:text-[12px] text-[#555] uppercase leading-relaxed tracking-widest">
+            Digital Executor brings strategy, marketing, sales systems, technology andimplementation together.
           </p>
         </div>
       </div>
@@ -65,8 +65,8 @@ const About = () => {
         {/* Left Side: Longform text & Stats Grid (col-span-8) */}
         <div className="lg:col-span-8 p-6 md:p-12 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-hairline bg-background/50">
           
-          <div className="text-lg md:text-2xl leading-relaxed text-[#888] font-light tracking-tight mb-12">
-            At <span className="text-white font-normal">Digital Executorr</span>, we don't just deliver digital services<span className="text-white font-normal"> we engineer intelligent systems </span>that help businesses work smarter, optimize customer journeys, and scale revenue. We combine AI agents, business automation, modern web experiences, mobile applications, and strategic marketing to build systems that work around the clock <span className="text-primary font-normal">so your business can grow faster with less manual effort.</span>.
+          <div className="text-lg md:text-xl leading-relaxed text-[#888] font-[poppins] tracking-tight mb-12">
+            At <span className="text-white">Digital Executorr</span>, we don't just deliver digital services<span className="text-white font-normal"> we engineer intelligent systems </span>that help businesses work smarter, optimize customer journeys, and scale revenue. We combine AI agents, business automation, modern web experiences, mobile applications, and strategic marketing to build systems that work around the clock <span className="text-primary font-normal">so your business can grow faster with less manual effort.</span>.
           </div>
 
           {/* <div
@@ -97,22 +97,22 @@ const About = () => {
           {/* Core metrics details grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 w-full border-t border-hairline bg-background/20">
             <div className="p-5 border-r last:border-r-0 border-hairline flex flex-col gap-3 group">
-              <span className="font-mono text-[8px] text-[#555] group-hover:text-primary transition-colors uppercase tracking-[0.25em] font-bold leading-none">AI.Systems</span>
+              <span className="font-light text-[8px] text-[#555] group-hover:text-primary transition-colors uppercase tracking-[0.25em] leading-none">AI.Systems</span>
               <span className="font-display text-2xl md:text-3xl text-white font-bold leading-none">20+</span>
             </div>
             
             <div className="p-5 border-r last:border-r-0 border-hairline flex flex-col gap-3 group">
-              <span className="font-mono text-[8px] text-[#555] group-hover:text-primary transition-colors uppercase tracking-[0.25em] font-bold leading-none">Businesses.Empowered</span>
+              <span className="font-light text-[8px] text-[#555] group-hover:text-primary transition-colors uppercase tracking-[0.25em] leading-none">Businesses.Empowered</span>
               <span className="font-display text-2xl md:text-3xl text-white font-bold leading-none">50+</span>
             </div>
 
             <div className="p-5 border-r last:border-r-0 border-hairline flex flex-col gap-3 group">
-              <span className="font-mono text-[8px] text-[#555] group-hover:text-primary transition-colors uppercase tracking-[0.25em] font-bold leading-none">Processes.Automated</span>
+              <span className="font-light text-[8px] text-[#555] group-hover:text-primary transition-colors uppercase tracking-[0.25em] leading-none">Processes.Automated</span>
               <span className="font-display text-2xl md:text-3xl text-white font-bold leading-none">100+</span>
             </div>
 
             <div className="p-5 border-r last:border-r-0 border-hairline flex flex-col gap-3 group">
-              <span className="font-mono text-[8px] text-[#555] group-hover:text-primary transition-colors uppercase tracking-[0.25em] font-bold leading-none">Client.Satisfaction</span>
+              <span className="font-light text-[8px] text-[#555] group-hover:text-primary transition-colors uppercase tracking-[0.25em] leading-none">Client.Satisfaction</span>
               <span className="font-display text-2xl md:text-3xl text-white font-bold leading-none">98%</span>
             </div>
           </div>
@@ -131,14 +131,12 @@ const About = () => {
 
           <div className="relative z-10">
             <span className="text-primary text-5xl font-display italic font-extrabold leading-none block mb-6">"</span>
-            <p className="text-white/80 text-xs md:text-sm italic leading-relaxed uppercase tracking-wider font-light">
-              "Technology should do more than impress—it should save time, generate revenue, and create opportunities for growth. That's exactly what we build."
+            <p className="text-white/80 text-xs md:text-sm leading-relaxed tracking-wider font-light">
+              "We begin by understanding your business, target customers, offer, current challenges,
+available resources and growth priorities. We then identify the most important
+bottlenecks and create an execution plan around them.
+"
             </p>
-          </div>
-
-          <div className="relative z-10 border-t border-hairline pt-4 mt-8 flex justify-between items-center">
-            <span className="font-mono text-[8px] uppercase tracking-widest text-[#555]">ENGINE_LOG: OK</span>
-            <div className="w-1.5 h-1.5 bg-primary rounded-full animate-ping"></div>
           </div>
         </div>
 

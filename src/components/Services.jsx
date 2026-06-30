@@ -32,7 +32,7 @@ const ServiceCard = ({ number, title, description }) => {
 
       <div className="relative z-10 h-full flex flex-col justify-between pointer-events-none">
         <div className="flex justify-between items-start mb-12">
-          <span className="font-mono text-[9px] text-[#444] group-hover:text-primary transition-colors tracking-widest uppercase font-bold">
+          <span className="font-[poppins] text-[9px] text-[#444] group-hover:text-primary transition-colors tracking-widest uppercase font-bold">
             SECTION.{number}
           </span>
           <div className="w-8 h-8 border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-black group-hover:border-primary transition-all duration-500 bg-background/50 backdrop-blur-sm">
@@ -44,10 +44,10 @@ const ServiceCard = ({ number, title, description }) => {
         </div>
 
         <div className="mt-auto">
-          <h3 className="text-lg md:text-xl font-display font-extrabold mb-4 text-white group-hover:text-primary transition-colors duration-300 uppercase leading-tight tracking-tight">
+          <h3 className="text-lg md:text-xl font-display mb-4 text-white group-hover:text-primary transition-colors duration-300 uppercase leading-tight tracking-tight">
             {title}
           </h3>
-          <p className="text-[#888] leading-relaxed text-[11px] md:text-[14px] group-hover:text-[#bbb] transition-colors duration-500 tracking-wide font-light">
+          <p className="text-[#888] leading-relaxed text-[11px] md:text-[14px] group-hover:text-[#bbb] transition-colors duration-500 tracking-wide font-[poppins]">
             {description}
           </p>
         </div>
@@ -60,33 +60,33 @@ const Services = () => {
   const serviceList = [
   {
     "number": "01",
-    "title": "AI AGENTS",
-    "description": "Deploy intelligent AI agents that automate customer support, qualify leads, schedule appointments, answer inquiries, and operate 24/7—reducing manual work while improving customer experience."
+    "title": "Performance Marketing",
+    "description": "Plan, launch and improve performance-focused campaigns designed around qualified enquiries, customer acquisition and agreed business KPIs."
   },
   {
     "number": "02",
-    "title": "BUSINESS AUTOMATION",
-    "description": "Streamline repetitive workflows with intelligent automation. From CRM integrations and lead management to WhatsApp, email, and internal business processes, we help your business run faster and more efficiently."
+    "title": "Meta Ads Management",
+    "description": "Reach the right audience through structured Facebook and Instagram advertising campaigns supported by creative testing, tracking and continuous optimization."
   },
   {
     "number": "03",
-    "title": "LEAD GENERATION & SALES",
-    "description": "Build predictable customer acquisition systems with automated funnels, conversion optimization, CRM pipelines, and sales automation designed to generate qualified leads and increase revenue."
+    "title": "Lead Generation",
+    "description": "Build a more reliable process for attracting, capturing, qualifying and following up withpotential customers."
   },
   {
     "number": "04",
-    "title": "DIGITAL MARKETING STRATEGY",
-    "description": "Develop data-driven marketing strategies that strengthen your brand, improve customer acquisition, and maximize return on every marketing investment across digital channels."
+    "title": "Growth Strategy and Consulting",
+    "description": "Identify the real barriers limiting your growth and develop a practical action plan based on your goals, market and current capabilities."
   },
   {
     "number": "05",
-    "title": "WEB & APP DEVELOPMENT",
-    "description": "Design and build high-performance websites, custom web applications, mobile apps, dashboards, and SaaS platforms focused on speed, scalability, and exceptional user experience."
+    "title": "Sales Funnels and Landing Pages",
+    "description": "Create focused customer journeys that move prospects from initial interest to enquiry, consultation, purchase or another meaningful action."
   },
   {
     "number": "06",
-    "title": "SOCIAL MEDIA & BRAND GROWTH",
-    "description": "Create strategic content systems that build authority, increase engagement, and establish a strong digital presence across today's most impactful social platforms."
+    "title": "Website Design and Development",
+    "description": "Build or improve a professional website that clearly communicates your value and encourages visitors to take the next step."
   }
 ]
 
@@ -96,12 +96,12 @@ const Services = () => {
       {/* Services Header */}
       <div className="w-full pt-4 mb-16 flex flex-col items-center text-center gap-4">
         <div className="max-w-3xl">
-          <h2 className="text-4xl md:text-6xl font-display font-extrabold leading-none tracking-tighter uppercase heading-gradient">
-            CORE SERVICES.
+          <h2 className="text-4xl md:text-6xl font-display leading-none tracking-tighter heading-gradient">
+            What We Can Help You Execute.
           </h2>
         </div>
         <div className="max-w-sm mt-4">
-          <p className="font-mono text-[9px] md:text-[10px] text-[#555] uppercase leading-relaxed tracking-widest">
+          <p className="font-[poppins] text-[9px] md:text-[12px] text-[#555] uppercase leading-relaxed tracking-widest">
             AI-powered solutions engineered to automate operations, accelerate growth, and build scalable digital businesses.
           </p>
         </div>

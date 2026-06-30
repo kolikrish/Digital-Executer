@@ -1,19 +1,9 @@
-import { useState, useEffect } from "react";
-
-const SplitTextLink = ({ href, children }) => {
-  return (
-    <a
-      href={href}
-      className="text-[11px] font-mono uppercase tracking-[0.3em] font-semibold text-[#888] hover:text-white py-1 transition-colors"
-    >
-      {children}
-    </a>
-  );
-};
+import { useState, useEffect, useRef } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const menuRef = useRef();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,8 +14,32 @@ const Navbar = () => {
       }
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+
+    // Close mobile menu when clicking outside
+    const handleClickOutside = (e) => {
+      if (isOpen && menuRef.current && !menuRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
+
+  // Prevent background scroll on mobile menu open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
     <nav className={`fixed top-0 w-full z-100 transition-all duration-500 py-5 ${
@@ -35,23 +49,38 @@ const Navbar = () => {
     }`}>
       <div className="max-w-7xl mx-auto border-x-2 border-hairline-strong px-6 sm:px-12 flex items-center justify-between">
         {/* Brand Logo */}
-        <a className="flex items-center gap-2 hover:opacity-80 transition-opacity z-101" href="#">
-          {/* <img 
-            alt="Resourcio" 
+        <a className="flex items-center gap-3 hover:opacity-90 transition-opacity z-101 py-1" href="#">
+          <img 
+            alt="Digital Executorr Logo" 
             loading="lazy"
-            width="150" 
-            height="24" 
-            className="brightness-0 invert md:w-37.5 md:h-6"
-            src="https://res.cloudinary.com/dbwbopuch/image/upload/v1759772826/Group_40110_p0gwzi.svg" 
-          /> */}
-          <h2>Digital Executerr</h2>
+            width="170"
+            height="44"
+            className="md:w-42 md:h-11 w-37 h-10 object-contain brightness-0 invert"
+            src="/src/assets/logo.png" 
+            style={{ display: "block" }}
+          />
         </a>
 
         {/* Center Desktop Links */}
-        <div className="hidden md:flex items-center gap-16">
-          <SplitTextLink href="#services">Services</SplitTextLink>
-          <SplitTextLink href="#projects">Projects</SplitTextLink>
-          <SplitTextLink href="#about">About</SplitTextLink>
+        <div className="hidden md:flex items-center gap-12">
+          <a
+            href="#services"
+            className="text-[15px] font-[poppins] text-[#888] hover:text-white py-1 transition-colors"
+          >
+            Services
+          </a>
+          <a
+            href="#projects"
+            className="text-[15px] font-[poppins] text-[#888] hover:text-white py-1 transition-colors"
+          >
+            Projects
+          </a>
+          <a
+            href="#about"
+            className="text-[15px] font-[poppins] text-[#888] hover:text-white py-1 transition-colors"
+          >
+            About
+          </a>
         </div>
 
         {/* CTA Button and Hamburger */}
@@ -66,16 +95,16 @@ const Navbar = () => {
           </a>
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white/70 hover:text-white transition-colors cursor-pointer"
+            className="md:hidden text-white/70 hover:text-white transition-colors cursor-pointer p-2 -mr-2"
             aria-label="Toggle Menu"
           >
             {isOpen ? (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M18 6L6 18M6 6l12 12" strokeLinecap="square"></path>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round"></path>
               </svg>
             ) : (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M3 12h18M3 6h18M3 18h18" strokeLinecap="square"></path>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M3 12h18M3 6h18M3 18h18" strokeLinecap="round"></path>
               </svg>
             )}
           </button>
@@ -84,28 +113,49 @@ const Navbar = () => {
 
       {/* Mobile Menu Panel */}
       {isOpen && (
-        <div className="md:hidden fixed inset-0 top-17.4 bg-background/95 backdrop-blur-xl z-99 border-t border-hairline-strong flex flex-col justify-start p-8 animate-fade-in">
-          <div className="flex flex-col gap-8 mt-8">
+        <div
+          ref={menuRef}
+          className="md:hidden fixed inset-0 bg-background/95 backdrop-blur-lg z-9999 border-t border-hairline-strong animate-fade-in flex flex-col"
+        >
+          <div className="flex justify-end p-4">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="text-white/70 hover:text-white transition-colors p-2"
+              aria-label="Close Mobile Menu"
+            >
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round"></path>
+              </svg>
+            </button>
+          </div>
+          <div className="flex flex-col gap-8 px-8 mt-12 w-full items-center">
             <a 
               href="#services" 
               onClick={() => setIsOpen(false)}
-              className="text-xl font-display font-semibold uppercase tracking-widest text-[#888] hover:text-white transition-colors"
+              className="text-lg font-display font-semibold uppercase tracking-widest text-[#888] hover:text-white transition-colors py-2 w-full text-center rounded hover:bg-primary/15"
             >
               Services
             </a>
             <a 
               href="#projects" 
               onClick={() => setIsOpen(false)}
-              className="text-xl font-display font-semibold uppercase tracking-widest text-[#888] hover:text-white transition-colors"
+              className="text-lg font-display font-semibold uppercase tracking-widest text-[#888] hover:text-white transition-colors py-2 w-full text-center rounded hover:bg-primary/15"
             >
               Projects
             </a>
             <a 
               href="#about" 
               onClick={() => setIsOpen(false)}
-              className="text-xl font-display font-semibold uppercase tracking-widest text-[#888] hover:text-white transition-colors"
+              className="text-lg font-display font-semibold uppercase tracking-widest text-[#888] hover:text-white transition-colors py-2 w-full text-center rounded hover:bg-primary/15"
             >
               About
+            </a>
+            <a 
+              href="#"
+              onClick={() => setIsOpen(false)}
+              className="btn-primary mt-6 w-full text-base py-3 px-2 uppercase"
+            >
+              Get Started
             </a>
           </div>
         </div>

@@ -7,15 +7,15 @@ const Team = () => {
       {/* Heading Block */}
       <div className="w-full pt-4 mb-16 flex flex-col items-center text-center gap-4">
         <div className="max-w-4xl">
-          <h2 className="text-4xl md:text-6xl font-display font-extrabold leading-none tracking-tighter uppercase heading-gradient">
+          <h2 className="text-4xl md:text-6xl font-display leading-none tracking-tighter heading-gradient">
             Who's Behind
           </h2>
-          <h2 className="text-4xl md:text-6xl font-display font-extrabold leading-none tracking-tighter uppercase text-white/20 mt-1">
+          <h2 className="text-4xl md:text-6xl font-display leading-none tracking-tighter text-white/20 mt-1">
             Digital Executerr ?
           </h2>
         </div>
         <div className="max-w-sm mt-4">
-          <p className="font-mono text-[9px] md:text-[10px] text-[#555] uppercase leading-relaxed tracking-widest">
+          <p className="font-[poppins] text-[9px] md:text-[12px] text-[#555] uppercase leading-relaxed tracking-widest">
             Meet the visionary engineer behind intelligent systems
           </p>
         </div>
@@ -41,7 +41,7 @@ const Team = () => {
               </div>
             </div>
 
-            <h2 className='text-3xl'>Naman Sisodiya</h2>
+            <h2 className='text-3xl font-[poppins]'>Naman Sisodiya</h2>
           </div>
         </div>
   
@@ -50,48 +50,44 @@ const Team = () => {
         {/* Profile Info Section */}
         <div className="flex-2 flex flex-col justify-center p-8 md:p-12 bg-background/30">
           <div>
-            <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-2">
+            <h3 className="text-2xl md:text-3xl font-display text-white mb-2">
               Founder & Visionary
             </h3>
-            <p className="text-primary font-mono text-[9px] md:text-[10px] uppercase tracking-[0.25em] font-bold mb-5">
-              @digital.executerr
+            <p className="text-primary font-light text-[9px] md:text-[10px] tracking-[0.25em] mb-5">
+              Founder & CEO @digital.executerr
             </p>
 
             {/* Stats - horizontal */}
             <div className="flex gap-10 mb-7">
               <div className="flex flex-col items-center">
-                <span className="font-display text-xl md:text-2xl text-white font-bold">20+</span>
-                <span className="font-mono text-[8px] text-[#555] uppercase tracking-widest">Projects</span>
+                <span className="text-xl md:text-2xl text-white font-bold">20+</span>
+                <span className="text-[8px] text-[#555] uppercase tracking-widest">Projects</span>
               </div>
               <div className="flex flex-col items-center">
-                <span className="font-display text-xl md:text-2xl text-white font-bold">50+</span>
-                <span className="font-mono text-[8px] text-[#555] uppercase tracking-widest">Clients</span>
+                <span className="text-xl md:text-2xl text-white font-bold">50+</span>
+                <span className="text-[8px] text-[#555] uppercase tracking-widest">Clients</span>
               </div>
               <div className="flex flex-col items-center">
-                <span className="font-display text-xl md:text-2xl text-white font-bold">5yrs</span>
-                <span className="font-mono text-[8px] text-[#555] uppercase tracking-widest">Exp</span>
+                <span className="text-xl md:text-2xl text-white font-bold">5yrs</span>
+                <span className="text-[8px] text-[#555] uppercase tracking-widest">Exp</span>
               </div>
             </div>
 
             {/* Bio */}
-            <p className="text-white/80 text-base md:text-lg leading-relaxed font-light mb-7">
-              With over <span className="text-white font-normal">5 years of expertise</span> in building digital solutions, the founder pioneered the integration of <span className="text-white font-normal">AI agents, business automation, and modern web technologies</span> to create revenue-driving systems. Every project is engineered with precision, delivering <span className="text-primary font-normal">intelligent systems that scale.</span>
+            <p className="text-white/80 text-base md:text-lg leading-relaxed font-[poppins] mb-7">
+              With over <span className="text-white">5 years of expertise</span> in building digital solutions, the founder pioneered the integration of <span className="text-white">AI agents, business automation, and modern web technologies</span> to create revenue-driving systems. Every project is engineered with precision, delivering <span className="text-primary">intelligent systems that scale.</span>
             </p>
           </div>
 
           {/* Social Links & Status */}
           <div className="pt-6 border-t border-hairline flex flex-col md:flex-row items-center md:justify-between gap-3 md:gap-0">
             <div className="flex gap-3 mb-3 md:mb-0">
-              <a href="#" className="text-primary hover:text-white transition-colors font-mono text-[9px] md:text-[10px] uppercase tracking-[0.25em] hover:bg-primary/10 px-3 py-2 border border-hairline">
+              <a href="#" className="text-primary hover:text-white transition-colors font-[poppins] text-[9px] md:text-[10px] tracking-[0.25em] hover:bg-primary/10 px-3 py-2 border border-hairline">
                 LinkedIn
               </a>
-              <a href="#" className="text-primary hover:text-white transition-colors font-mono text-[9px] md:text-[10px] uppercase tracking-[0.25em] hover:bg-primary/10 px-3 py-2 border border-hairline">
+              <a href="#" className="text-primary hover:text-white transition-colors font-[poppins] text-[9px] md:text-[10px] tracking-[0.25em] hover:bg-primary/10 px-3 py-2 border border-hairline">
                 Twitter
               </a>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></div>
-              <span className="font-mono text-[8px] uppercase tracking-widest text-[#555]">ACTIVE</span>
             </div>
           </div>
         </div>
