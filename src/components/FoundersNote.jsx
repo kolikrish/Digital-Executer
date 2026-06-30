@@ -1,4 +1,4 @@
-import profilePic from '../assets/Hetali_rai.jpeg';
+import Hetali_rai from '../assets/Hetali_rai.jpeg';
 
 const FoundersNote = () => {
   return (
@@ -27,7 +27,7 @@ const FoundersNote = () => {
           <div className="relative group overflow-hidden rounded-2xl border border-hairline bg-[#0c0c0c] w-full max-w-75 aspect-5/5 shadow-[0_15px_30px_rgba(0,0,0,0.3)]">
             <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none" />
             <img
-              src={profilePic}
+              src={Hetali_rai}
               alt="Hitali Rai"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />

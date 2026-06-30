@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import Logo from '../assets/logo.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,7 +55,7 @@ const Navbar = () => {
             alt="Digital Executorr Logo"
             loading="lazy"
             className="h-12 md:h-16 w-auto object-contain brightness-0 invert transition-all"
-            src="/src/assets/logo.png" 
+            src={Logo} 
             style={{ display: "block" }}
           />
         </a>
