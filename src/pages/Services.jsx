@@ -5,7 +5,7 @@ const Services = () => {
   const servicesList = [
     {
       title: "GROWTH AND STRATEGY",
-      subtitle: "Business and marketing assessmen, Audience and customer analysis",
+      subtitle: "Business and marketing assessment, Audience and customer analysis",
       description:
         "We assess your business, customers, offer, current channels, competitors and available resources. We then define the most relevant priorities, campaigns and customer journeys.",
       features: [
@@ -14,7 +14,7 @@ const Services = () => {
         "Offer Testing and Validation",
         "Product and Service Feedback",
       ],
-      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
     },
     {
       title: "ADVERTISING AND LEAD GENERATION",
@@ -26,7 +26,7 @@ const Services = () => {
         "Meta Ads Management",
         "Lead Generation",
       ],
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
     },
     {
       title: "WEBSITES AND CONVERSION SYSTEMS",
@@ -39,7 +39,7 @@ const Services = () => {
         "Website Design and Development",
         "Conversion Rate Optimization",
       ],
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
     },
     {
       title: "SEO AND ORGANIC GROWTH",
@@ -52,7 +52,7 @@ const Services = () => {
         "Local SEO recommendations, where relevant",
         "Performance monitoring",
       ],
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
     },
 
     {
@@ -66,7 +66,7 @@ const Services = () => {
         "Marketing and Sales Automation",
         "Lead Follow-Up Automation",
       ],
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
     },
 
     {
@@ -79,7 +79,7 @@ const Services = () => {
         "End-to-End Growth Execution",
         "Clearer campaign comparisons",
       ],
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
     },
   ];
 
@@ -107,10 +107,10 @@ const Services = () => {
         {/* Header Section */}
         <section className="w-full max-w-7xl mx-auto px-6 sm:px-12 pt-16 pb-8 border-x-2 border-hairline-strong bg-background text-center relative">
           <span className="px-5 py-1.5 font-mono text-[11px] uppercase tracking-[0.3em] text-primary border-x border-primary/30 relative">
-            <span className="absolute top-0 left-0 w-2.5 h-[1px] bg-primary"></span>
-            <span className="absolute top-0 right-0 w-2.5 h-[1px] bg-primary"></span>
-            <span className="absolute bottom-0 left-0 w-2.5 h-[1px] bg-primary"></span>
-            <span className="absolute bottom-0 right-0 w-2.5 h-[1px] bg-primary"></span>
+            <span className="absolute top-0 left-0 w-2.5 h-px bg-primary"></span>
+            <span className="absolute top-0 right-0 w-2.5 h-1px bg-primary"></span>
+            <span className="absolute bottom-0 left-0 w-2.5 h-1px bg-primary"></span>
+            <span className="absolute bottom-0 right-0 w-2.5 h-1px bg-primary"></span>
             SERVICES
           </span>
 
@@ -152,7 +152,7 @@ const Services = () => {
                   <ul className="space-y-3 font-[poppins] text-xs sm:text-sm text-white/90">
                     {service.features.map((feature, fIndex) => (
                       <li key={fIndex} className="flex items-center gap-3">
-                        <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-primary" />
+                        <span className="shrink-0 w-1.5 h-1.5 rounded-full bg-primary" />
                         <span>{feature}</span>
                       </li>
                     ))}

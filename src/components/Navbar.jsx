@@ -49,13 +49,11 @@ const Navbar = () => {
     }`}>
       <div className="max-w-7xl mx-auto border-x-2 border-hairline-strong px-6 sm:px-12 flex items-center justify-between">
         {/* Brand Logo */}
-        <a className="flex items-center gap-3 hover:opacity-90 transition-opacity z-101 py-1" href="#">
+        <a className="flex items-center gap-3 hover:opacity-90 transition-opacity z-101 py-1" href="/">
           <img 
-            alt="Digital Executorr Logo" 
+            alt="Digital Executorr Logo"
             loading="lazy"
-            width="170"
-            height="44"
-            className="md:w-42 md:h-11 w-37 h-10 object-contain brightness-0 invert"
+            className="h-12 md:h-16 w-auto object-contain brightness-0 invert transition-all"
             src="/src/assets/logo.png" 
             style={{ display: "block" }}
           />

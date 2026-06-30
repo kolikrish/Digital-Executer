@@ -12,15 +12,15 @@ const Contact = () => {
 
         {/* Header copy */}
         <div className="relative z-10 max-w-4xl mb-8 md:mb-12">
-          <h2 className="text-4xl sm:text-6xl md:text-7xl font-display leading-[0.95] tracking-tighter heading-gradient">
+          <h2 className="text-4xl sm:text-6xl md:text-7xl font-display tracking-tighter heading-gradient">
             Ready To Architect
           </h2>
-          <h2 className="text-4xl sm:text-6xl md:text-7xl font-display leading-[0.95] tracking-tighter text-white/20 mt-1">
+          <h2 className="text-4xl sm:text-6xl md:text-7xl font-display tracking-tighter text-white/20 mt-1">
             Your Foundation ?
           </h2>
         </div>
 
-        <p className="relative z-10 font-mono text-[9px] md:text-[12px] text-[#888] uppercase tracking-[0.3em] font-semibold mb-8 max-w-md">
+        <p className="relative z-10 font-[poppins] text-[9px] md:text-[14px] text-[#888] uppercase mb-8 max-w-md">
           Available for strategic partnerships and high-stakes technical execution.
         </p>
 

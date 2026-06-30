@@ -1,8 +1,9 @@
-﻿import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar";
 import AboutSection from "../components/About";
+import AboutMission from "../components/AboutMission";
+import FoundersNote from "../components/FoundersNote";
 import Footer from "../components/Footer";
-import FaQ from "@/components/FaQ";
-// import About2 from "@/components/About2";
+import FaQ from "../components/FaQ";
 
 const About = () => {
   return (
@@ -11,7 +12,7 @@ const About = () => {
         className="fixed inset-0 z-50 pointer-events-none opacity-[0.02] mix-blend-overlay"
         style={{
           backgroundImage:
-            "url('https://res.cloudinary.com/dbwbopuch/image/upload/v1759774934/noise_f7u1f.png')",
+            "url('https://res.cloudinary.com/dbwbopuch/image/upload/v1759774934/noise_f7u1qf.png')",
         }}
       />
 
@@ -24,7 +25,10 @@ const About = () => {
           <AboutSection />
         </div>
 
-        {/* <About2 /> */}
+        <AboutMission />
+
+        <FoundersNote />
+
         <FaQ />
 
         <Footer />
