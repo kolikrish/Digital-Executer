@@ -179,7 +179,7 @@ const Services = () => {
 
         {/* CTA section at bottom */}
         <section className="w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 md:py-24 border-x-2 border-t border-hairline bg-background text-center relative overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-primary/5 blur-[100px] rounded-full pointer-events-none z-0"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-100 h-100 bg-primary/5 blur-[100px] rounded-full pointer-events-none z-0"></div>
           
           <div className="relative z-10 max-w-2xl mx-auto space-y-6">
             <h2 className="text-3xl sm:text-4xl font-display tracking-tight text-white leading-tight">

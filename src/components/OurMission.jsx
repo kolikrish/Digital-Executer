@@ -58,7 +58,7 @@ const OurMission = () => {
   return (
     <section className="relative w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 md:py-24 bg-background border-x-2 border-hairline-strong border-t border-hairline">
       {/* Background Radial Glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/5 blur-[130px] rounded-full pointer-events-none z-0"></div>
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-150 h-150 bg-primary/5 blur-[130px] rounded-full pointer-events-none z-0"></div>
 
       <div className="relative z-10 space-y-16">
         {/* Mission Statement Hero Box */}
@@ -82,7 +82,7 @@ const OurMission = () => {
             <h3 className="font-mono text-[14px] uppercase tracking-[0.3em] text-[#666] font-bold">
               Execution Methodology
             </h3>
-            <div className="h-[1px] bg-hairline-strong flex-grow"></div>
+            <div className="h-px bg-hairline-strong grow"></div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

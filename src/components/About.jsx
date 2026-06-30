@@ -1,6 +1,17 @@
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 import Globe from "../assets/globe.gif";
 
 const About = () => {
+  const originHeadingRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: originHeadingRef,
+    offset: ["start 85%", "end 45%"],
+  });
+  const originHeading =
+    "Digital Executerr was built to fix the gap between ideas and execution — where strategy is clear but delivery is unreliable.";
+  const originWords = originHeading.split(" ");
+
   return (
     <section id="about" className="relative w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 md:py-24">
       <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
@@ -56,9 +67,26 @@ const About = () => {
         <div className="space-y-6">
           <div className="rounded-[2rem] border border-hairline bg-[#0c0c0c] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
             <span className="text-[10px] uppercase tracking-[0.45em] text-primary">Origin</span>
-            <h3 className="mt-6 text-3xl sm:text-3xl font-display leading-tight text-white">
-              Digital Executerr was built to fix the gap between ideas and execution — where strategy is clear but delivery is unreliable.
-            </h3>
+            <motion.h3
+              ref={originHeadingRef}
+              className="mt-6 text-3xl sm:text-3xl font-display leading-tight text-white"
+              aria-label={originHeading}
+            >
+              {originWords.map((word, index) => {
+                const start = index / originWords.length;
+                const end = start + 1 / originWords.length;
+
+                return (
+                  <ScrollWord
+                    key={`${word}-${index}`}
+                    progress={scrollYProgress}
+                    range={[start * 0.65, end * 0.65 + 0.2]}
+                  >
+                    {word}
+                  </ScrollWord>
+                );
+              })}
+            </motion.h3>
             <p className="mt-6 font-[poppins] text-sm sm:text-base leading-relaxed text-[#b8b8b8]">
               Too many teams get plans without systems. We create resilient delivery engines that combine automation, performance marketing, and operational discipline so business momentum stays built-in, not bolted on.
             </p>
@@ -84,6 +112,20 @@ const About = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+const ScrollWord = ({ children, progress, range }) => {
+  const opacity = useTransform(progress, range, [0.18, 1]);
+
+  return (
+    <motion.span
+      style={{ opacity }}
+      className="inline-block whitespace-pre text-white"
+      aria-hidden="true"
+    >
+      {children}{" "}
+    </motion.span>
   );
 };
 

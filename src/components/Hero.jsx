@@ -1,4 +1,5 @@
 import NeuralFieldScatter from "./NeuralFieldScatter";
+import { TextAnimate } from "./ui/text-animate";
 
 const Hero = () => {
   return (
@@ -35,20 +36,23 @@ const Hero = () => {
           
           {/* Header Title with Aurora Gradient */}
           <div className="mb-4 md:mb-6">
-            <h1 className="relative inline-block font-display text-center leading-none tracking-tighter text-4xl sm:text-6xl md:text-7xl">
-              {/* <span className="sr-only">Design. Build. Deliver.</span> */}
-              <span 
-                className="animate-aurora relative bg-clip-text text-transparent bg-linear-to-r from-[#272727] via-[#d6d6d6] to-[#272727]"
-                style={{ 
-                  backgroundImage: 'linear-gradient(135deg, #272727 0%, #b6b6b6 25%, #ffffff 50%, #b6b6b6 75%, #272727 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundSize: '200% auto'
-                }}
-              >
-                Stop Collecting Strategies.  <br/>Start Executing Growth.
-              </span>
-            </h1>
+            <TextAnimate
+              as="h1"
+              by="line"
+              animation="blurInUp"
+              duration={0.8}
+              startOnView={false}
+              className="relative inline-block font-display text-center leading-none tracking-tighter text-4xl sm:text-6xl md:text-7xl"
+              segmentClassName="animate-aurora relative bg-clip-text text-transparent bg-linear-to-r from-[#272727] via-[#d6d6d6] to-[#272727]"
+              style={{
+                backgroundImage: 'linear-gradient(135deg, #272727 0%, #b6b6b6 25%, #ffffff 50%, #b6b6b6 75%, #272727 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundSize: '200% auto'
+              }}
+            >
+              {`Stop Collecting Strategies.\n Start Executing Growth.`}
+            </TextAnimate>
           </div>
 
           {/* Subtitle & Tagline */}

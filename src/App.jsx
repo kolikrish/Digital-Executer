@@ -8,7 +8,7 @@ import { ScrollProgress } from "./components/ui/scroll-progress"
 const App = () => {
   return (
     <>
-    <ScrollProgress className="z-[100] h-1 bg-linear-to-r from-primary via-[#ff8a3d] to-white/80" />
+    <ScrollProgress className="z-100 h-1 bg-linear-to-r from-primary via-[#ff8a3d] to-white/80" />
     <div>
       <Routes>
         <Route path="/" element={<Home/>}/>
@@ -21,4 +21,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
