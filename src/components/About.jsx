@@ -1,148 +1,89 @@
-/*eslint-disable */
-
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-import Globe from '../assets/globe.gif'; // adjust the path/filename as necessary
-
-gsap.registerPlugin(ScrollTrigger);
+import Globe from "../assets/globe.gif";
 
 const About = () => {
-
-  const textRevealRef = useRef(null);
-
-  useEffect(() => {
-    if (!textRevealRef.current) return;
-
-    const words = textRevealRef.current.querySelectorAll(".reveal-word");
-
-    gsap.fromTo(
-      words,
-      {
-        color: "#4b5563", // dark gray
-      },
-      {
-        color: "#ffffff",
-        stagger: 0.08,
-        ease: "none",
-        scrollTrigger: {
-          trigger: textRevealRef.current,
-          start: "top 75%",
-          end: "bottom 40%",
-          scrub: true,
-        },
-      }
-    );
-  }, []);
-
-    const text = "At Digital Executorr, we don't just deliver digital services we engineer intelligent systems that help businesses work smarter, optimize customer journeys, and scale revenue. We combine AI agents, business automation, modern web experiences, mobile applications, and strategic marketing to build systems that work around the clock so your business can grow faster with less manual effort.";
-
-
   return (
-    <div id="about" className="relative w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 md:py-24 bg-background border-x-2 border-hairline-strong flex flex-col items-start">
-      
-      {/* Heading Block */}
-      <div className="w-full pt-4 mb-16 flex flex-col items-center text-center gap-4">
-        <div className="max-w-4xl">
-          <h2 className="text-4xl md:text-6xl font-display leading-none tracking-tighter heading-gradient">
-            We Build the System —
-          </h2>
-          <h2 className="text-4xl md:text-6xl font-display leading-none tracking-tighter text-white/20 mt-1">
-            and Help You Execute It.
-          </h2>
-        </div>
-        <div className="max-w-sm mt-4">
-          <p className="font-mono text-[9px] md:text-[12px] text-[#555] uppercase leading-relaxed tracking-widest">
-            Digital Executor brings strategy, marketing, sales systems, technology andimplementation together.
-          </p>
-        </div>
-      </div>
+    <section id="about" className="relative w-full max-w-7xl mx-auto px-6 sm:px-12 py-16 md:py-24">
+      <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
 
-      {/* Grid Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 w-full gap-0 border border-hairline bg-[#050505]">
-        
-        {/* Left Side: Longform text & Stats Grid (col-span-8) */}
-        <div className="lg:col-span-8 p-6 md:p-12 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-hairline bg-background/50">
-          
-          <div className="text-lg md:text-xl leading-relaxed text-[#888] font-[poppins] tracking-tight mb-12">
-            At <span className="text-white">Digital Executorr</span>, we don't just deliver digital services<span className="text-white font-normal"> we engineer intelligent systems </span>that help businesses work smarter, optimize customer journeys, and scale revenue. We combine AI agents, business automation, modern web experiences, mobile applications, and strategic marketing to build systems that work around the clock <span className="text-primary font-normal">so your business can grow faster with less manual effort.</span>.
+        {/* Left panel: hero card with stats */}
+        <div className="relative overflow-hidden rounded-[2rem] border border-hairline bg-[#050505] shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,77,0,0.16),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(255,77,0,0.08),transparent_30%)] pointer-events-none" />
+          <div className="absolute inset-0 opacity-20 pointer-events-none">
+            <img
+              src={Globe}
+              alt="Office background"
+              className="w-full h-full object-cover"
+            />
           </div>
 
-          {/* <div
-            ref={textRevealRef}
-            className="text-lg md:text-2xl leading-relaxed font-light uppercase tracking-tight mb-12"
-          >
-            {text.split(" ").map((word, index) => (
-              <span
-                key={index}
-                className={`reveal-word ${
-                  word === "Digital"
-                    ? "font-normal"
-                    : word === "Executorr,"
-                    ? "font-normal"
-                    : word === "systems"
-                    ? "text-primary font-normal"
-                    : ""
-                }`}
-                style={{ color: "#555" }}
-              >
-                {word}&nbsp;
+          <div className="relative z-10 flex min-h-140 flex-col justify-between p-8 sm:p-10 lg:p-12">
+            <div className="max-w-2xl">
+              <span className="inline-flex rounded-full border border-primary/25 bg-primary/5 px-3 py-1 text-[10px] uppercase tracking-[0.45em] text-primary">
+                Built For Execution
               </span>
-            ))}
-          </div> */}
 
-          
+              <h2 className="mt-8 font-display text-3xl sm:text-4xl lg:text-5xl leading-tight text-white">
+                Stop Collecting
+                <br />
+                Strategies.
+                <br />
+                Start Executing Growth.
+              </h2>
 
-          {/* Core metrics details grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 w-full border-t border-hairline bg-background/20">
-            <div className="p-5 border-r last:border-r-0 border-hairline flex flex-col gap-3 group">
-              <span className="font-light text-[8px] text-[#555] group-hover:text-primary transition-colors uppercase tracking-[0.25em] leading-none">AI.Systems</span>
-              <span className="font-display text-2xl md:text-3xl text-white font-bold leading-none">20+</span>
-            </div>
-            
-            <div className="p-5 border-r last:border-r-0 border-hairline flex flex-col gap-3 group">
-              <span className="font-light text-[8px] text-[#555] group-hover:text-primary transition-colors uppercase tracking-[0.25em] leading-none">Businesses.Empowered</span>
-              <span className="font-display text-2xl md:text-3xl text-white font-bold leading-none">50+</span>
+              <p className="mt-6 mb-6 font-[poppins] text-sm sm:text-base leading-relaxed text-[#b8b8b8] max-w-xl">
+                Digital Executerr helps businesses move beyond strategy and low-cost labor by building dependable delivery systems, automation frameworks, and conversion-focused customer journeys that run 24/7.
+              </p>
             </div>
 
-            <div className="p-5 border-r last:border-r-0 border-hairline flex flex-col gap-3 group">
-              <span className="font-light text-[8px] text-[#555] group-hover:text-primary transition-colors uppercase tracking-[0.25em] leading-none">Processes.Automated</span>
-              <span className="font-display text-2xl md:text-3xl text-white font-bold leading-none">100+</span>
-            </div>
-
-            <div className="p-5 border-r last:border-r-0 border-hairline flex flex-col gap-3 group">
-              <span className="font-light text-[8px] text-[#555] group-hover:text-primary transition-colors uppercase tracking-[0.25em] leading-none">Client.Satisfaction</span>
-              <span className="font-display text-2xl md:text-3xl text-white font-bold leading-none">98%</span>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 rounded-[1.75rem] border border-hairline bg-white/5 p-5 backdrop-blur-xl">
+              <div className="rounded-[1.5rem] border border-hairline bg-[#0d0d0d] p-5">
+                <p className="text-[11px] uppercase tracking-[0.35em] text-[#8b8b8b]">Acceptance</p>
+                <p className="mt-3 text-3xl font-display text-white">98.5%</p>
+              </div>
+              <div className="rounded-[1.5rem] border border-hairline bg-[#0d0d0d] p-5">
+                <p className="text-[11px] uppercase tracking-[0.35em] text-[#8b8b8b]">Uptime</p>
+                <p className="mt-3 text-3xl font-display text-white">24/7</p>
+              </div>
+              <div className="rounded-[1.5rem] border border-hairline bg-[#0d0d0d] p-5">
+                <p className="text-[11px] uppercase tracking-[0.35em] text-[#8b8b8b]">Continents</p>
+                <p className="mt-3 text-3xl font-display text-white">2</p>
+              </div>
             </div>
           </div>
-
         </div>
 
-        {/* Right Side: Globe GIF Wireframe simulation card (col-span-4) */}
-        <div className="lg:col-span-4 p-8 md:p-12 flex flex-col justify-between relative overflow-hidden group min-h-9 border-hairline">
-          {/* Blueprint backdrop on right side card */}
-          <div className="absolute inset-0 blueprint-grid opacity-10 pointer-events-none"></div>
-          
-          {/* Globe Canvas Simulation */}
-          <div className="absolute w-[80%] h-[80%] opacity-40 mix-blend-screen pointer-events-none">
-            <img src={Globe} alt="Globe" className="w-full h-full object-cover" />
-          </div>
-
-          <div className="relative z-10">
-            <span className="text-primary text-5xl font-display italic font-extrabold leading-none block mb-6">"</span>
-            <p className="text-white/80 text-xs md:text-sm leading-relaxed tracking-wider font-light">
-              "We begin by understanding your business, target customers, offer, current challenges,
-available resources and growth priorities. We then identify the most important
-bottlenecks and create an execution plan around them.
-"
+        {/* Right panel: story + cards */}
+        <div className="space-y-6">
+          <div className="rounded-[2rem] border border-hairline bg-[#0c0c0c] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
+            <span className="text-[10px] uppercase tracking-[0.45em] text-primary">Origin</span>
+            <h3 className="mt-6 text-3xl sm:text-3xl font-display leading-tight text-white">
+              Digital Executerr was built to fix the gap between ideas and execution — where strategy is clear but delivery is unreliable.
+            </h3>
+            <p className="mt-6 font-[poppins] text-sm sm:text-base leading-relaxed text-[#b8b8b8]">
+              Too many teams get plans without systems. We create resilient delivery engines that combine automation, performance marketing, and operational discipline so business momentum stays built-in, not bolted on.
             </p>
           </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="rounded-[1.75rem] border border-hairline bg-[#080808] p-6">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 text-primary">•</span>
+              <h4 className="mt-4 text-xl font-medium text-white">Always Improving</h4>
+              <p className="mt-3 text-sm font-[poppins] leading-relaxed text-[#a9a9a9]">
+                US-led quality and global execution combine with data-driven iteration so every campaign, funnel and automation improves as it runs.
+              </p>
+            </div>
+
+            <div className="rounded-[1.75rem] border border-hairline bg-linear-to-br from-[#080808] via-[#130000] to-[#180000] p-6 text-white">
+              <span className="text-[10px] uppercase tracking-[0.35em] text-[#b27d58]">Era</span>
+              <h4 className="mt-4 text-xl font-medium">Built for the AI Era.</h4>
+              <p className="mt-3 text-sm font-[poppins] leading-relaxed text-[#d1d1d1]">
+                We pair automation with human oversight so decision-making, delivery, and growth all move at the pace of intelligence.
+              </p>
+            </div>
+          </div>
         </div>
-
       </div>
-
-    </div>
+    </section>
   );
 };
 

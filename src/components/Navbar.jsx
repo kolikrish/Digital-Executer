@@ -64,22 +64,28 @@ const Navbar = () => {
         {/* Center Desktop Links */}
         <div className="hidden md:flex items-center gap-12">
           <a
-            href="#services"
+            href="/"
+            className="text-[15px] font-[poppins] text-[#888] hover:text-white py-1 transition-colors"
+          >
+            Home
+          </a>
+          <a
+            href="/about"
+            className="text-[15px] font-[poppins] text-[#888] hover:text-white py-1 transition-colors"
+          >
+            About
+          </a>
+          <a
+            href="/services"
             className="text-[15px] font-[poppins] text-[#888] hover:text-white py-1 transition-colors"
           >
             Services
           </a>
           <a
-            href="#projects"
+            href="/contact"
             className="text-[15px] font-[poppins] text-[#888] hover:text-white py-1 transition-colors"
           >
-            Projects
-          </a>
-          <a
-            href="#about"
-            className="text-[15px] font-[poppins] text-[#888] hover:text-white py-1 transition-colors"
-          >
-            About
+            Contact
           </a>
         </div>
 
