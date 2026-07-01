@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { TextGenerateEffect } from "../components/ui/text-generate-effect";
 
 const Services = () => {
   const servicesList = [
@@ -114,9 +115,13 @@ const Services = () => {
             SERVICES
           </span>
 
-          <h1 className="text-4xl sm:text-5xl md:text-5xl font-display font-medium text-white tracking-tight mt-6 mb-4 leading-none">
-            Services Built Around the Complete Customer Journey
-          </h1>
+          <TextGenerateEffect
+            as="h1"
+            words="Services Built Around the Complete Customer Journey"
+            className="text-4xl sm:text-5xl md:text-5xl font-display font-medium text-white tracking-tight mt-6 mb-4 leading-none"
+            duration={0.5}
+            delay={0.12}
+          />
           <p className="font-[poppins] text-sm md:text-base text-[#888] max-w-2xl mx-auto leading-relaxed mt-2">
             We architect, develop, and manage dependable business & software infrastructures. Explore our core areas of delivery below.
           </p>

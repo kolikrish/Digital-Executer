@@ -1,9 +1,10 @@
 import NeuralFieldScatter from "./NeuralFieldScatter";
-import { TextAnimate } from "./ui/text-animate";
+import { TextGenerateEffect } from "./ui/text-generate-effect";
+import { motion } from "motion/react";
 
 const Hero = () => {
   return (
-    <div id="hero" className="relative flex flex-col items-center justify-center w-full min-h-screen px-6 sm:px-12 pt-28 pb-16 overflow-hidden bg-background">
+    <div id="hero" className="relative flex flex-col items-center justify-center w-full min-h-screen px-6 sm:px-12 pt-28 overflow-hidden bg-background">
       {/* Background grids and overlays */}
       <div className="absolute inset-0 blueprint-grid opacity-15 z-0 pointer-events-none"></div>
       
@@ -35,24 +36,21 @@ const Hero = () => {
         <div className="w-full flex flex-col items-center text-center relative z-10 animate-[fadeIn_1s_ease-out_forwards]">
           
           {/* Header Title with Aurora Gradient */}
-          <div className="mb-4 md:mb-6">
-            <TextAnimate
+          <div className="mb-4 md:mb-14">
+            <TextGenerateEffect
               as="h1"
-              by="word"
-              animation="blurInUp"
-              duration={.5}
-              startOnView={false}
-              className="relative inline-block font-display text-center leading-none tracking-tighter text-4xl sm:text-6xl md:text-7xl"
-              segmentClassName="animate-aurora relative bg-clip-text text-transparent bg-linear-to-r from-[#272727] via-[#d6d6d6] to-[#272727]"
-              style={{
+              words={`Stop Collecting Strategies.\n Start Executing Growth.`}
+              className="relative inline-block whitespace-pre-line font-display text-center leading-none tracking-tighter text-4xl sm:text-6xl md:text-7xl"
+              wordClassName="animate-aurora relative bg-clip-text text-transparent"
+              wordStyle={{
                 backgroundImage: 'linear-gradient(135deg, #272727 0%, #b6b6b6 25%, #ffffff 50%, #b6b6b6 75%, #272727 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
-                backgroundSize: '200% auto'
+                backgroundSize: '200% auto',
               }}
-            >
-              {`Stop Collecting Strategies.\n Start Executing Growth.`}
-            </TextAnimate>
+              duration={0.5}
+              delay={0.12}
+            />
           </div>
 
           {/* Subtitle & Tagline */}
@@ -68,23 +66,24 @@ const Hero = () => {
 
           {/* Call To Action Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 md:mb-24 w-full sm:w-auto px-4">
-            <a 
+            <motion.a initial={{opacity: 0, y:40}} whileInView={{opacity: 1, y:0}} viewport={{once: true}} transition={{duration: .02, delay: .3}}
               target="_blank" 
               rel="noopener noreferrer"
               href="#"
               className="flex items-center justify-center gap-3 px-8 py-3.5 border border-hairline bg-white/5 hover:bg-white/10 hover:border-primary/50 text-white text-[12px] tracking-[0.2em] font-light font-[poppins] transition-all duration-300 w-full sm:w-55"
             >
               Book Your Free Consultation
-            </a>
+            </motion.a>
 
-            <a 
+            <motion.a
+              initial={{opacity: 0, y:40}} whileInView={{opacity: 1, y:0}} viewport={{once: true}} transition={{duration: .02, delay: .4}}
               target="_blank" 
               rel="noopener noreferrer"
               href="#"
               className="flex items-center justify-center gap-3 px-8 py-3.5 border border-hairline bg-white/5 hover:bg-white/10 hover:border-primary/50 text-white text-[12px] tracking-[0.2em] font-light font-[poppins] transition-all duration-300 w-full sm:w-55"
             >
               Explore Our Services
-            </a>
+            </motion.a>
           </div>
 
         </div>

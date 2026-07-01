@@ -20,9 +20,11 @@ export const TextGenerateEffect = ({
   as: Component = "div",
   className,
   wordClassName,
+  wordStyle,
   filter = true,
   duration = 0.5,
   delay = 0.2,
+  ...props
 }) => {
   const [scope, animate] = useAnimate();
   const MotionComponent = motionElements[Component] ?? motion.div;
@@ -39,7 +41,11 @@ export const TextGenerateEffect = ({
   }, [animate, delay, duration, filter]);
 
   return (
-    <MotionComponent ref={scope} className={cn("text-white", className)}>
+    <MotionComponent
+      ref={scope}
+      className={cn("text-white", className)}
+      {...props}
+    >
       {wordsArray.map((word, idx) => {
         if (/^\s+$/.test(word)) {
           return word;
@@ -51,6 +57,7 @@ export const TextGenerateEffect = ({
             data-text-generate-word
             className={cn("inline-block opacity-0", wordClassName)}
             style={{
+              ...wordStyle,
               filter: filter ? "blur(10px)" : "none",
             }}
           >
