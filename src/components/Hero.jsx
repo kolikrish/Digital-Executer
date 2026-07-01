@@ -38,9 +38,9 @@ const Hero = () => {
           <div className="mb-4 md:mb-6">
             <TextAnimate
               as="h1"
-              by="line"
+              by="word"
               animation="blurInUp"
-              duration={0.8}
+              duration={.5}
               startOnView={false}
               className="relative inline-block font-display text-center leading-none tracking-tighter text-4xl sm:text-6xl md:text-7xl"
               segmentClassName="animate-aurora relative bg-clip-text text-transparent bg-linear-to-r from-[#272727] via-[#d6d6d6] to-[#272727]"

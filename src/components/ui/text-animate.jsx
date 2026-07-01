@@ -268,19 +268,33 @@ const TextAnimateBase = ({
   let segments
   switch (by) {
     case "word":
-      segments = children.split(/(\s+)/)
+      segments = children.split(/(\s+)/).map((segment) => ({
+        text: segment,
+        shouldAnimate: !/^\s+$/.test(segment),
+      }))
       break
     case "character":
-      segments = children.split("")
+      segments = children.split("").map((segment) => ({
+        text: segment,
+        shouldAnimate: true,
+      }))
       break
     case "line":
-      segments = children.split("\n")
+      segments = children.split("\n").map((segment) => ({
+        text: segment,
+        shouldAnimate: true,
+      }))
       break
     case "text":
     default:
-      segments = [children]
+      segments = [{ text: children, shouldAnimate: true }]
       break
   }
+
+  const animatedSegmentCount = Math.max(
+    segments.filter((segment) => segment.shouldAnimate).length,
+    1
+  )
 
   const finalVariants = variants
     ? {
@@ -291,13 +305,13 @@ const TextAnimateBase = ({
             transition: {
               opacity: { duration: 0.01, delay },
               delayChildren: delay,
-              staggerChildren: duration / segments.length,
+              staggerChildren: duration / animatedSegmentCount,
             },
           },
           exit: {
             opacity: 0,
             transition: {
-              staggerChildren: duration / segments.length,
+              staggerChildren: duration / animatedSegmentCount,
               staggerDirection: -1,
             },
           },
@@ -312,13 +326,13 @@ const TextAnimateBase = ({
               ...defaultItemAnimationVariants[animation].container.show,
               transition: {
                 delayChildren: delay,
-                staggerChildren: duration / segments.length,
+                staggerChildren: duration / animatedSegmentCount,
               },
             },
             exit: {
               ...defaultItemAnimationVariants[animation].container.exit,
               transition: {
-                staggerChildren: duration / segments.length,
+                staggerChildren: duration / animatedSegmentCount,
                 staggerDirection: -1,
               },
             },
@@ -342,8 +356,8 @@ const TextAnimateBase = ({
         {accessible && <span className="sr-only">{children}</span>}
         {segments.map((segment, i) => (
           <motion.span
-            key={`${by}-${segment}-${i}`}
-            variants={finalVariants.item}
+            key={`${by}-${segment.text}-${i}`}
+            variants={segment.shouldAnimate ? finalVariants.item : undefined}
             custom={i * staggerTimings[by]}
             className={cn(
               by === "line" ? "block" : "inline-block whitespace-pre",
@@ -351,7 +365,7 @@ const TextAnimateBase = ({
               segmentClassName
             )}
             aria-hidden={accessible ? true : undefined}>
-            {segment}
+            {segment.text}
           </motion.span>
         ))}
       </MotionComponent>

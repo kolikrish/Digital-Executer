@@ -1,4 +1,7 @@
+/* eslint-disable */
+
 import { useState } from "react";
+import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 const ServiceCard = ({ number, title, description }) => {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
@@ -96,9 +99,19 @@ const Services = () => {
       {/* Services Header */}
       <div className="w-full pt-4 mb-16 flex flex-col items-center text-center gap-4">
         <div className="max-w-3xl">
+
+          {/* <TextGenerateEffect
+            as="h2"
+            words="What We Can Help You Execute."
+            className="text-4xl md:text-6xl font-display leading-none tracking-tighter heading-gradient"
+            duration={0.5}
+            delay={0.12}
+          /> */}
+
           <h2 className="text-4xl md:text-6xl font-display leading-none tracking-tighter heading-gradient">
             What We Can Help You Execute.
           </h2>
+
         </div>
         <div className="max-w-sm mt-4">
           <p className="font-[poppins] text-[9px] md:text-[12px] text-[#555] uppercase leading-relaxed tracking-widest">
