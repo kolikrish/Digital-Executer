@@ -67,7 +67,7 @@ const Testimonials = () => {
           </h3>
         </div>
 
-        <div className="flex gap-1 text-yellow-400 text-xs">
+        <div className="flex gap-1 text-primary text-xs">
           {Array.from({ length: 5 }).map((_, i) => (
             <span
               key={i}
@@ -132,7 +132,7 @@ const Testimonials = () => {
         className="relative w-full max-w-7xl mx-auto px-6 sm:px-12 py-20 bg-[#0A0A0A] overflow-hidden"
       >
         <div className="text-center max-w-3xl mx-auto">
-          <p className="text-[10px] uppercase tracking-[0.55em] text-yellow-400 font-mono mb-4">
+          <p className="text-[10px] uppercase tracking-[0.55em] text-primary font-mono mb-4">
             FEEDBACK.
           </p>
 

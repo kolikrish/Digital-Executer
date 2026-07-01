@@ -17,14 +17,14 @@ const MissionCard = ({ step, text }) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative bg-[#0d0d0d] group p-6 sm:p-8 flex flex-col justify-between border border-hairline hover:border-primary/20 transition-all duration-500 overflow-hidden rounded-2xl cursor-default shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_35px_rgba(255,77,0,0.05)]"
+      className="relative bg-[#0d0d0d] group p-6 sm:p-8 flex flex-col justify-between border border-hairline hover:border-primary/20 transition-all duration-500 overflow-hidden rounded-2xl cursor-default shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_35px_rgba(212,175,55,0.08)]"
     >
       {/* Radial glow spotlight tracking mouse */}
       <div
         className="pointer-events-none absolute -inset-px transition-opacity duration-500 z-0"
         style={{
           opacity: isHovered ? 1 : 0,
-          background: `radial-gradient(250px circle at ${coords.x}px ${coords.y}px, rgba(255, 77, 0, 0.08), transparent 80%)`,
+          background: `radial-gradient(250px circle at ${coords.x}px ${coords.y}px, rgba(212, 175, 55, 0.09), transparent 80%)`,
         }}
       />
       {/* Subtle blueprint grid track inside card */}
@@ -62,16 +62,16 @@ const OurMission = () => {
 
       <div className="relative z-10 space-y-16">
         {/* Mission Statement Hero Box */}
-        <div className="relative overflow-hidden rounded-[2.5rem] border border-hairline bg-linear-to-br from-[#070707] via-[#0d0d0d] to-[#120700] p-8 sm:p-12 md:p-16 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,77,0,0.12),transparent_40%)] pointer-events-none" />
+        <div className="relative overflow-hidden rounded-[2.5rem] border border-hairline bg-linear-to-br from-[#070707] via-[#0d0d0d] to-[#171207] p-8 sm:p-12 md:p-16 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.13),transparent_40%)] pointer-events-none" />
           <div className="absolute inset-0 blueprint-grid opacity-[0.03] pointer-events-none" />
 
           <div className="max-w-4xl space-y-6">
             <h2 className="text-3xl sm:text-4xl lg:text-4xl font-display leading-[1.1] tracking-tight text-white font-medium">
               To help businesses replace confusion and disconnected activities with{" "}
-              <span className="orange-gradient-text">clear strategies</span>,{" "}
+              <span className="gold-gradient-text">clear strategies</span>,{" "}
               <span className="text-white">connected systems</span> and{" "}
-              <span className="orange-gradient-text">consistent execution</span>.
+              <span className="gold-gradient-text">consistent execution</span>.
             </h2>
           </div>
         </div>

@@ -4,11 +4,33 @@ import About from "./pages/About"
 import Services from "./pages/Services"
 import Contact from "./pages/Contact"
 import { ScrollProgress } from "./components/ui/scroll-progress"
+import { useEffect, useState } from "react"
+import { AnimatePresence } from "motion/react"
+import Loader from "./components/loader/Loader"
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden"
+
+    const timeout = setTimeout(() => {
+      setIsLoading(false)
+      document.body.style.overflow = ""
+    }, 3000)
+
+    return () => {
+      clearTimeout(timeout)
+      document.body.style.overflow = ""
+    }
+  }, [])
+
   return (
     <>
-    <ScrollProgress className="z-100 h-1 bg-linear-to-r from-primary via-[#fd6321] to-white/80" />
+    <AnimatePresence mode="wait">
+      {isLoading && <Loader />}
+    </AnimatePresence>
+    <ScrollProgress className="z-100 h-1 bg-linear-to-r from-[#8F6F3E] via-primary to-[#F7E7B6]" />
     <div>
       <Routes>
         <Route path="/" element={<Home/>}/>

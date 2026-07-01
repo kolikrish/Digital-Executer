@@ -1,3 +1,5 @@
+import Logo from "../assets/logo.png";
+
 const FooterColumn = ({ title, links }) => (
   <div className="flex flex-col gap-4">
     {/* Column heading */}
@@ -105,7 +107,7 @@ const Footer = () => {
       {/* Blueprint grid overlay */}
       <div className="absolute inset-0 blueprint-grid opacity-[0.06] pointer-events-none z-0" />
 
-      {/* Subtle orange glow at top-center */}
+      {/* Subtle gold glow at top-center */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-150 h-50 bg-primary/5 blur-[120px] opacity-40 pointer-events-none z-0" />
 
       {/* ── Top section: logo tagline + columns ── */}
@@ -114,7 +116,13 @@ const Footer = () => {
 
 
           <div className="md:col-span-1 flex flex-col gap-6">
-            <a href="#" className="group inline-block">
+            <a href="#" className="group inline-flex flex-col items-start gap-3">
+              <img
+                src={Logo}
+                alt="Digital Executerr Logo"
+                loading="lazy"
+                className="h-16 w-auto object-contain transition-all duration-300 group-hover:drop-shadow-[0_0_18px_rgba(212,175,55,0.22)]"
+              />
               <h2 className="font-display font-extrabold text-lg uppercase tracking-tight text-white group-hover:text-primary transition-colors duration-300">
                 Digital<br />
                 <span className="text-primary group-hover:text-white transition-colors duration-300">Executerr</span>

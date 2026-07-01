@@ -8,7 +8,7 @@ const Hero = () => {
       {/* Background grids and overlays */}
       <div className="absolute inset-0 blueprint-grid opacity-15 z-0 pointer-events-none"></div>
       
-      {/* Orange glow spotlight in center top */}
+      {/* Gold glow spotlight in center top */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-250 h-87.5 bg-primary/10 blur-[140px] opacity-25 z-0 pointer-events-none"></div>
 
       {/* Embedded interactive canvas particle web */}
@@ -22,13 +22,13 @@ const Hero = () => {
         {/* Diagonal moving light beam effects */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
           <div className="absolute bg-white/2" style={{ left: '15%', top: '-100%', width: '1px', height: '300%', transform: 'rotate(35deg)' }}>
-            <div className="absolute inset-0 w-full h-full" style={{ background: 'linear-gradient(180deg, transparent, rgba(255, 77, 0, 0.2), transparent)' }}></div>
+            <div className="absolute inset-0 w-full h-full" style={{ background: 'linear-gradient(180deg, transparent, rgba(212, 175, 55, 0.22), transparent)' }}></div>
           </div>
           <div className="absolute bg-white/2" style={{ left: '45%', top: '-100%', width: '1px', height: '300%', transform: 'rotate(35deg)' }}>
-            <div className="absolute inset-0 w-full h-full" style={{ background: 'linear-gradient(180deg, transparent, rgba(255, 77, 0, 0.2), transparent)' }}></div>
+            <div className="absolute inset-0 w-full h-full" style={{ background: 'linear-gradient(180deg, transparent, rgba(212, 175, 55, 0.22), transparent)' }}></div>
           </div>
           <div className="absolute bg-white/2" style={{ left: '75%', top: '-100%', width: '1px', height: '300%', transform: 'rotate(35deg)' }}>
-            <div className="absolute inset-0 w-full h-full" style={{ background: 'linear-gradient(180deg, transparent, rgba(255, 77, 0, 0.2), transparent)' }}></div>
+            <div className="absolute inset-0 w-full h-full" style={{ background: 'linear-gradient(180deg, transparent, rgba(212, 175, 55, 0.22), transparent)' }}></div>
           </div>
         </div>
 
@@ -40,10 +40,10 @@ const Hero = () => {
             <TextGenerateEffect
               as="h1"
               words={`Stop Collecting Strategies.\n Start Executing Growth.`}
-              className="relative inline-block whitespace-pre-line font-display text-center leading-none tracking-tighter text-4xl sm:text-6xl md:text-7xl"
+              className="relative inline-block whitespace-pre-line text-center leading-none tracking-tighter text-4xl sm:text-6xl md:text-7xl"
               wordClassName="animate-aurora relative bg-clip-text text-transparent"
               wordStyle={{
-                backgroundImage: 'linear-gradient(135deg, #272727 0%, #b6b6b6 25%, #ffffff 50%, #b6b6b6 75%, #272727 100%)',
+                backgroundImage: 'linear-gradient(135deg, #2b2417 0%, #B08948 25%, #ffffff 50%, #E6C87A 72%, #6F4E1F 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundSize: '200% auto',

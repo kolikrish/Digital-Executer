@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import Logo from '../assets/logo.png'
 
 const Navbar = () => {
@@ -50,7 +51,7 @@ const Navbar = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-6 sm:px-12 flex items-center justify-between">
         {/* Brand Logo */}
-        <a className="flex items-center gap-3 hover:opacity-90 transition-opacity z-101 py-1" href="/">
+        <Link className="flex items-center gap-3 hover:opacity-90 transition-opacity z-101 py-1" to="/">
           <img 
             alt="Digital Executorr Logo"
             loading="lazy"
@@ -58,34 +59,39 @@ const Navbar = () => {
             src={Logo} 
             style={{ display: "block" }}
           />
-        </a>
+
+        <h2 className="font-display text-lg tracking-tight text-white group-hover:text-primary transition-colors duration-300">
+            Digital<br />
+            <span className="text-primary group-hover:text-white transition-colors duration-300">Executerr</span>
+        </h2>
+        </Link>
 
         {/* Center Desktop Links */}
         <div className="hidden md:flex items-center gap-12">
-          <a
-            href="/"
+          <Link
+            to="/"
             className="text-[15px] font-[poppins] text-[#888] hover:text-white py-1 transition-colors"
           >
             Home
-          </a>
-          <a
-            href="/about"
+          </Link>
+          <Link
+            to="/about"
             className="text-[15px] font-[poppins] text-[#888] hover:text-white py-1 transition-colors"
           >
             About
-          </a>
-          <a
-            href="/services"
+          </Link>
+          <Link
+            to="/services"
             className="text-[15px] font-[poppins] text-[#888] hover:text-white py-1 transition-colors"
           >
             Services
-          </a>
-          <a
-            href="/contact"
+          </Link>
+          <Link
+            to="/contact"
             className="text-[15px] font-[poppins] text-[#888] hover:text-white py-1 transition-colors"
           >
             Contact
-          </a>
+          </Link>
         </div>
 
         {/* CTA Button and Hamburger */}
@@ -134,34 +140,34 @@ const Navbar = () => {
             </button>
           </div>
           <div className="flex flex-col gap-8 px-8 mt-12 w-full items-center">
-            <a 
-              href="/" 
+            <Link 
+              to="/" 
               onClick={() => setIsOpen(false)}
               className="text-lg font-display font-semibold uppercase tracking-widest text-[#888] hover:text-white transition-colors py-2 w-full text-center rounded hover:bg-primary/15"
             >
               Home
-            </a>
-            <a 
-              href="/about" 
+            </Link>
+            <Link 
+              to="/about" 
               onClick={() => setIsOpen(false)}
               className="text-lg font-display font-semibold uppercase tracking-widest text-[#888] hover:text-white transition-colors py-2 w-full text-center rounded hover:bg-primary/15"
             >
               About
-            </a>
-            <a 
-              href="/services" 
+            </Link>
+            <Link 
+              to="/services" 
               onClick={() => setIsOpen(false)}
               className="text-lg font-display font-semibold uppercase tracking-widest text-[#888] hover:text-white transition-colors py-2 w-full text-center rounded hover:bg-primary/15"
             >
               Services
-            </a>
-            <a 
-              href="/contact"
+            </Link>
+            <Link 
+              to="/contact"
               onClick={() => setIsOpen(false)}
               className="btn-primary mt-6 w-full text-base py-3 px-2 uppercase"
             >
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       )}

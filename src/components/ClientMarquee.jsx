@@ -13,7 +13,7 @@ const ClientMarquee = () => {
         <div className="flex w-max animate-marquee whitespace-nowrap gap-16 items-center">
           {listItems.map((client, idx) => (
             <div key={idx} className="flex items-center gap-4 px-2">
-              {/* Rotating orange diamond separator */}
+              {/* Rotating gold diamond separator */}
               <div className="w-2.5 h-2.5 bg-primary/40 rotate-45 shrink-0 transition-all duration-500 hover:bg-primary hover:scale-125"></div>
               
               <span className="font-[poppins] text-lg md:text-2xl text-white/30 hover:text-white transition-colors duration-500 cursor-default whitespace-nowrap">

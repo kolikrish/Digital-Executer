@@ -21,7 +21,7 @@ const About = () => {
 
         {/* Left panel: hero card with stats */}
         <motion.div drag dragSnapToOrigin className="relative cursor-pointer overflow-hidden rounded-[2rem] border border-hairline bg-[#050505] shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,77,0,0.16),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(255,77,0,0.08),transparent_30%)] pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(212,175,55,0.16),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(176,137,72,0.1),transparent_30%)] pointer-events-none" />
           <div className="absolute inset-0 opacity-20 pointer-events-none">
             <img
               src={Globe}
@@ -104,8 +104,8 @@ const About = () => {
               </p>
             </motion.div>
 
-            <motion.div drag dragSnapToOrigin className="rounded-[1.75rem] border border-hairline cursor-pointer bg-linear-to-br from-[#080808] via-[#130000] to-[#180000] p-6 text-white">
-              <span className="text-[10px] uppercase tracking-[0.35em] text-[#b27d58]">Era</span>
+            <motion.div drag dragSnapToOrigin className="rounded-[1.75rem] border border-hairline cursor-pointer bg-linear-to-br from-[#080808] via-[#171207] to-[#211807] p-6 text-white">
+              <span className="text-[10px] uppercase tracking-[0.35em] text-[#E6C87A]">Era</span>
               <h4 className="mt-4 text-xl font-medium">Built for the AI Era.</h4>
               <p className="mt-3 text-sm font-[poppins] leading-relaxed text-[#d1d1d1]">
                 We pair automation with human oversight so decision-making, delivery, and growth all move at the pace of intelligence.

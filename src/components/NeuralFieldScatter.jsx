@@ -55,7 +55,7 @@ const NeuralFieldScatter = () => {
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(255, 77, 0, 0.4)";
+        ctx.fillStyle = "rgba(212, 175, 55, 0.42)";
         ctx.fill();
       }
     }
@@ -80,7 +80,7 @@ const NeuralFieldScatter = () => {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(255, 77, 0, ${alpha})`;
+            ctx.strokeStyle = `rgba(212, 175, 55, ${alpha})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -96,7 +96,7 @@ const NeuralFieldScatter = () => {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(mouse.x, mouse.y);
-            ctx.strokeStyle = `rgba(255, 77, 0, ${alpha})`;
+            ctx.strokeStyle = `rgba(212, 175, 55, ${alpha})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }

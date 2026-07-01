@@ -1,0 +1,113 @@
+.loader-introduction {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(212, 175, 55, 0.12), transparent 34%),
+    linear-gradient(135deg, #050505 0%, #0a0a0a 50%, #171207 100%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(212, 175, 55, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(212, 175, 55, 0.04) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: radial-gradient(circle at center, black, transparent 72%);
+    pointer-events: none;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: calc(100% + 300px);
+    pointer-events: none;
+
+    path {
+      fill: #0a0a0a;
+    }
+  }
+}
+
+.loader-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  color: #f7e7b6;
+  text-align: center;
+  transform-origin: center;
+}
+
+.loader-kicker {
+  color: #d4af37;
+  font-family: var(--font-mono);
+  font-size: 18px;
+//   letter-spacing: 0.42em;
+//   text-transform: uppercase;
+}
+
+.loader-content p {
+  margin: 0;
+  color: #fff3d2;
+  font-family: var(poppins);
+//   font-size: 30px;
+  font-size: clamp(30px, 3vw, 58px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0;
+  text-shadow: 0 0 34px rgba(212, 175, 55, 0.14);
+}
+
+.loader-line {
+  width: min(280px, 38vw);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #8f6f3e, #f7e7b6, #8f6f3e, transparent);
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.34);
+}
+
+@media (max-width: 900px) {
+  .loader-introduction svg {
+    height: calc(100% + 260px);
+  }
+}
+
+@media (max-width: 600px) {
+  .loader-introduction {
+    padding: 0 28px;
+
+    svg {
+      height: calc(100% + 220px);
+    }
+  }
+
+  .loader-content {
+    width: calc(100% - 56px);
+    transform: scale(0.98);
+  }
+
+  .loader-kicker {
+    font-size: 10px;
+    letter-spacing: 0.32em;
+  }
+}
+
+@media (max-width: 400px) {
+  .loader-introduction svg {
+    height: calc(100% + 190px);
+  }
+
+  .loader-content {
+    transform: scale(0.94);
+  }
+}

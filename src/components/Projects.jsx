@@ -29,8 +29,8 @@ const projectList = [
     status: "Live",
     description: "A premium property showcase experience built for luxury listings and elevated buyer journeys.",
     link: "https://royalstudios.org/",
-    themeColor: "#FFD60A",
-    image: "https://via.placeholder.com/900x620/0A0A0A/FFD60A?text=Royal+Studios"
+    themeColor: "#D4AF37",
+    image: "https://via.placeholder.com/900x620/0A0A0A/D4AF37?text=Royal+Studios"
   }
 ];
 

@@ -18,7 +18,7 @@ const AboutMission = () => {
             <br />
             Should Not Remain in
             <br />
-            <span className="orange-gradient-text">Presentations</span>
+            <span className="gold-gradient-text">Presentations</span>
           </h2>
 
           <p className="font-[poppins] text-sm sm:text-base leading-relaxed text-[#b8b8b8] max-w-xl">
@@ -39,7 +39,7 @@ const AboutMission = () => {
           </div>
 
           {/* Card 2: The Solution */}
-          <div className="rounded-[1.75rem] border border-hairline bg-linear-to-br from-[#080808] via-[#100500] to-[#1a0c02] p-8 shadow-[0_15px_40px_rgba(0,0,0,0.25)] hover:border-primary/20 transition-all duration-300 border-l-2 border-l-primary/40">
+          <div className="rounded-[1.75rem] border border-hairline bg-linear-to-br from-[#080808] via-[#151007] to-[#211807] p-8 shadow-[0_15px_40px_rgba(0,0,0,0.25)] hover:border-primary/20 transition-all duration-300 border-l-2 border-l-primary/40">
             <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-primary mb-3 block">
               OUR CONNECTION
             </span>

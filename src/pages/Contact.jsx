@@ -253,7 +253,7 @@ const Contact = () => {
 
                   <button
                     type="submit"
-                    className="relative z-10 w-full sm:w-auto bg-primary hover:bg-transparent text-black hover:text-primary border border-primary font-mono font-bold uppercase tracking-[0.2em] text-[10px] md:text-[11px] px-8 py-3.5 rounded-full inline-flex items-center justify-center gap-2 transition-all cursor-pointer shadow-[0_0_15px_rgba(255,77,0,0.15)] hover:shadow-[0_0_20px_rgba(255,77,0,0.25)]"
+                    className="relative z-10 w-full sm:w-auto bg-primary hover:bg-transparent text-black hover:text-primary border border-primary font-mono font-bold uppercase tracking-[0.2em] text-[10px] md:text-[11px] px-8 py-3.5 rounded-full inline-flex items-center justify-center gap-2 transition-all cursor-pointer shadow-[0_0_15px_rgba(212,175,55,0.18)] hover:shadow-[0_0_20px_rgba(212,175,55,0.28)]"
                   >
                     Send Message
                     <svg

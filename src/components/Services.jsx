@@ -24,10 +24,10 @@ const ServiceCard = ({ number, title, description }) => {
     >
       {/* Radial gradient background tracking mouse */}
       <div 
-        className="pointer-events-none absolute -inset-px transition-opacity duration-500 z-0" 
+        className="pointer-events-none absolute -inset-px transition-opacity duration-500 z-0"
         style={{
           opacity: isHovered ? 1 : 0,
-          background: `radial-gradient(350px circle at ${coords.x}px ${coords.y}px, rgba(255, 77, 0, 0.09), transparent 80%)`
+          background: `radial-gradient(350px circle at ${coords.x}px ${coords.y}px, rgba(212, 175, 55, 0.1), transparent 80%)`
         }}
       />
       {/* Blueprint grid back overlay */}
