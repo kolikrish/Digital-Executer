@@ -7,6 +7,7 @@ import { ScrollProgress } from "./components/ui/scroll-progress"
 import { useEffect, useState } from "react"
 import { AnimatePresence } from "motion/react"
 import Loader from "./components/loader/Loader"
+import LegalPage from "./pages/LegalPage"
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -37,6 +38,7 @@ const App = () => {
         <Route path="/about" element={<About/>}/>
         <Route path="/services" element={<Services/>}/>
         <Route path="/contact" element={<Contact/>}/>
+        <Route path="/legal/:slug" element={<LegalPage/>}/>
       </Routes>
     </div>
     </>

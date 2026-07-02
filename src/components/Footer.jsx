@@ -1,4 +1,5 @@
 import Logo from "../assets/logo.png";
+import {Link} from "react-router-dom"
 
 const FooterColumn = ({ title, links }) => (
   <div className="flex flex-col gap-4">
@@ -12,12 +13,12 @@ const FooterColumn = ({ title, links }) => (
     <ul className="flex flex-col gap-2.5">
       {links.map((link, i) => (
         <li key={i}>
-          <a
-            href={link.href}
+          <Link
+            to={link.href}
             className="font-[poppins] text-[14px] text-[#555] hover:text-white transition-colors duration-200"
           >
             {link.label}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>
@@ -55,29 +56,28 @@ const Footer = () => {
       title: "Company",
       links: [
         { label: "Home", href: "/" },
-        { label: "About Us", href: "#about" },
-        { label: "Contact Us", href: "#contact" },
-        { label: "Book a Consultation", href: "#consultation" },
+        { label: "About Us", href: "/about" },
+        { label: "Contact Us", href: "/contact" },
+        { label: "Book a Consultation", href: "https://docs.google.com/forms/d/e/1FAIpQLSesejnxWiLfiigREDdxPpbJH9Y09Z_D0GalDOkTpqI6-WrN8Q/viewform" },
       ],
     },
     {
       title: "Connect",
       links: [
         { label: "Book a Call", href: "https://calendly.com/" },
-        { label: "Contact Us", href: "#contact" },
-        { label: "WhatsApp", href: "#" },
-        { label: "LinkedIn", href: "#" },
-        { label: "Instagram", href: "#" },
+        { label: "WhatsApp", href: "https://wa.me/916264483737" },
+        { label: "Email", href: "mailto:digitalexecutor08@gmail.com" },
+        { label: "LinkedIn", href: "https://www.linkedin.com/company/digitalexecutor/" },
+        { label: "Instagram", href: "https://www.instagram.com/digitalexecutorr/" },
       ],
     },
     {
       title: "Legal",
       links: [
-        { label: "Privacy Policy", href: "#" },
-        { label: "Terms of Service", href: "#" },
-        { label: "Cookie Policy", href: "#" },
-        { label: "Refund Policy", href: "#" },
-        { label: "Disclaimer", href: "#" },
+        { label: "Privacy Policy", href: "/legal/privacy-policy" },
+        { label: "Terms and Conditions", href: "/legal/terms-and-conditions" },
+        { label: "Disclaimer", href: "/legal/disclaimer" },
+        { label: "Refund Policy", href: "/legal/refund-cancellation-policy" },
       ],
     },
     {
@@ -136,7 +136,7 @@ const Footer = () => {
 
             {/* Social icons */}
             <div className="flex items-center gap-2 mt-2">
-              <SocialIcon href="#" label="LinkedIn">
+              <SocialIcon href="https://www.linkedin.com/company/digitalexecutor/" label="LinkedIn">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                   <rect x="2" y="9" width="4" height="12" />
@@ -144,7 +144,7 @@ const Footer = () => {
                 </svg>
               </SocialIcon>
 
-              <SocialIcon href="#" label="Instagram">
+              <SocialIcon href="https://www.instagram.com/digitalexecutorr/" label="Instagram">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                   <circle cx="12" cy="12" r="4" />
@@ -152,17 +152,18 @@ const Footer = () => {
                 </svg>
               </SocialIcon>
 
-              <SocialIcon href="#" label="WhatsApp">
+              <SocialIcon href="https://wa.me/916264483737" label="WhatsApp">
                 <svg width="13" height="13" viewBox="0 0 448 512" fill="currentColor">
                   <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
                 </svg>
               </SocialIcon>
 
-              <SocialIcon href="#" label="X / Twitter">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              <SocialIcon href="mailto:digitalexecutor08@gmail.com" label="Gmail">
+                <svg width="16" height="12" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 4H4C2.897 4 2 4.897 2 6v12c0 1.102.897 2 2 2h16c1.103 0 2-.898 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 5.132-8-5.132V6h16zm-16 12V8.155l7.445 4.778a2.003 2.003 0 0 0 2.11 0L20 8.155V18H4z"/>
                 </svg>
               </SocialIcon>
+         
             </div>
           </div>
 
@@ -182,18 +183,16 @@ const Footer = () => {
         </p>
 
         <div className="flex items-center gap-6">
-          <a href="#" className="text-[12px] text-[#444] hover:text-primary tracking-widest transition-colors">
+          <Link to="/legal/privacy-policy" className="text-[12px] text-[#444] hover:text-primary tracking-widest transition-colors">
             Privacy Policy
-          </a>
+          </Link>
           <span className="text-[#333] text-[9px]">|</span>
-          <a href="#" className="text-[12px] text-[#444] hover:text-primary tracking-widest transition-colors">
+          <Link to="/legal/terms-and-conditions" className="text-[12px] text-[#444] hover:text-primary tracking-widest transition-colors">
             Terms of Service
-          </a>
+          </Link>
           <span className="text-[#333] text-[9px]">|</span>
-          <a href="#" className="text-[12px] text-[#444] hover:text-primary tracking-widest transition-colors">
-            Accessibility
-          </a>
         </div>
+   
       </div>
 
     </footer>

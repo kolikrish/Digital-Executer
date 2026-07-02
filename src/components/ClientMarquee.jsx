@@ -1,7 +1,8 @@
 const ClientMarquee = () => {
   const clients = [
-    "Hetali Rai",
-    "Naman Sisodiya",
+    "Plan Better",
+    "Execute Smarter",
+    "Improve Continuously"
   ];
 
   // Duplicate items to ensure smooth infinite loop
@@ -9,8 +10,8 @@ const ClientMarquee = () => {
 
   return (
     <div className="w-full bg-background overflow-hidden py-8 border-x-2 border-hairline-strong max-w-7xl mx-auto">
-      <div className="relative z-20 overflow-hidden mask-[linear-gradient(to_right,transparent,white_15%,white_85%,transparent)]">
-        <div className="flex w-max animate-marquee whitespace-nowrap gap-16 items-center">
+      <div className="relative z-20 overflow-hidden mask-[linear-gradient(to_right,transparent,white_15%,white_85%,transparent)] client-marquee">
+        <div className="client-marquee-track flex w-max whitespace-nowrap gap-16 items-center">
           {listItems.map((client, idx) => (
             <div key={idx} className="flex items-center gap-4 px-2">
               {/* Rotating gold diamond separator */}

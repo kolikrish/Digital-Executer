@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import NeuralFieldScatter from "./NeuralFieldScatter";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { motion } from "motion/react";
@@ -64,27 +65,36 @@ const Hero = () => {
             </p>
           </div>
 
-          {/* Call To Action Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 md:mb-24 w-full sm:w-auto px-4">
-            <motion.a initial={{opacity: 0, y:40}} whileInView={{opacity: 1, y:0}} viewport={{once: true}} transition={{duration: .02, delay: .3}}
-              target="_blank" 
-              rel="noopener noreferrer"
-              href="#"
+        {/* Call To Action Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 md:mb-24 w-full sm:w-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.02, delay: 0.3 }}
+          >
+            <Link
+              to="https://docs.google.com/forms/d/e/1FAIpQLSesejnxWiLfiigREDdxPpbJH9Y09Z_D0GalDOkTpqI6-WrN8Q/viewform" // Change to your route
               className="flex items-center justify-center gap-3 px-8 py-3.5 border border-hairline bg-white/5 hover:bg-white/10 hover:border-primary/50 text-white text-[12px] tracking-[0.2em] font-light font-[poppins] transition-all duration-300 w-full sm:w-55"
             >
               Book Your Free Consultation
-            </motion.a>
+            </Link>
+          </motion.div>
 
-            <motion.a
-              initial={{opacity: 0, y:40}} whileInView={{opacity: 1, y:0}} viewport={{once: true}} transition={{duration: .02, delay: .4}}
-              target="_blank" 
-              rel="noopener noreferrer"
-              href="#"
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.02, delay: 0.4 }}
+          >
+            <Link
+              to="/services" // Change to your route
               className="flex items-center justify-center gap-3 px-8 py-3.5 border border-hairline bg-white/5 hover:bg-white/10 hover:border-primary/50 text-white text-[12px] tracking-[0.2em] font-light font-[poppins] transition-all duration-300 w-full sm:w-55"
             >
               Explore Our Services
-            </motion.a>
-          </div>
+            </Link>
+          </motion.div>
+        </div>
 
         </div>
       </div>

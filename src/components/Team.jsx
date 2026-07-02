@@ -82,11 +82,11 @@ const Team = () => {
           {/* Social Links & Status */}
           <div className="pt-6 border-t border-hairline flex flex-col md:flex-row items-center md:justify-between gap-3 md:gap-0">
             <div className="flex gap-3 mb-3 md:mb-0">
-              <a href="#" className="text-primary hover:text-white transition-colors font-[poppins] text-[9px] md:text-[10px] tracking-[0.25em] hover:bg-primary/10 px-3 py-2 border border-hairline">
+              <a href="linkedin.com/in/naman-sisodiya-7632622aa" className="text-primary hover:text-white transition-colors font-[poppins] text-[9px] md:text-[10px] tracking-[0.25em] hover:bg-primary/10 px-3 py-2 border border-hairline">
                 LinkedIn
               </a>
-              <a href="#" className="text-primary hover:text-white transition-colors font-[poppins] text-[9px] md:text-[10px] tracking-[0.25em] hover:bg-primary/10 px-3 py-2 border border-hairline">
-                Twitter
+              <a href="https://www.instagram.com/naman29.ai/" className="text-primary hover:text-white transition-colors font-[poppins] text-[9px] md:text-[10px] tracking-[0.25em] hover:bg-primary/10 px-3 py-2 border border-hairline">
+                Instagram
               </a>
             </div>
           </div>

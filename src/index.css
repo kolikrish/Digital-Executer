@@ -33,6 +33,29 @@
   }
 }
 
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.client-marquee {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.client-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 16px;
+  animation: scrollLeft 30s linear infinite;
+  will-change: transform;
+}
+
+@keyframes scrollLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 .marquee-track {
   display: flex;
   flex-wrap: nowrap;
